@@ -4,8 +4,15 @@ exports[`<Main /> should render the heading 1`] = `
 <main
   class="bg-gray-900 text-white w-full h-full p-12 text-center flex flex-col items-center justify-center"
 >
-  <h1>
+  <h1
+    class="text-black"
+  >
     React avançado
   </h1>
+  <p
+    class="text-black"
+  >
+    teeeeeeest
+  </p>
 </main>
 `;
