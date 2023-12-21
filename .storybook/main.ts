@@ -17,9 +17,9 @@ const config: StorybookConfig = {
   docs: {
     autodocs: true
   },
-  webpackFinal: (config) =>{
+  webpackFinal: (config) => {
     config.resolve?.modules?.push(`${process.cwd()}/src`)
     return config
-  },
+  }
 }
 export default config

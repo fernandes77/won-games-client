@@ -3,4 +3,4 @@ export const Main = () => (
     <h1>React avançado</h1>
     <p>teeeeeeest</p>
   </main>
-);
+)
