@@ -1,3 +1,4 @@
+import Link, { type LinkProps } from 'next/link'
 import { twMerge } from 'tailwind-merge'
 
 type ButtonProps = {
@@ -9,11 +10,11 @@ type ButtonProps = {
   as?:
     | {
         type: 'button'
-        props?: React.ButtonHTMLAttributes<HTMLButtonElement>
+        props?: React.ButtonHTMLAttributes<HTMLButtonElement> | undefined
       }
     | {
-        type: 'a'
-        props?: React.AnchorHTMLAttributes<HTMLAnchorElement>
+        type: 'link'
+        props: LinkProps
       }
 }
 
@@ -42,12 +43,12 @@ export const Button = ({
   hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]
   `
 
-  if (as?.type === 'a')
+  if (as?.type === 'link')
     return (
-      <a {...as.props} className={twMerge(classes, className)}>
+      <Link {...as.props} className={twMerge(classes, className)}>
         {hasIcon && icon}
         <span className={hasIcon ? 'ml-xxs' : ''}>{children}</span>
-      </a>
+      </Link>
     )
 
   return (
