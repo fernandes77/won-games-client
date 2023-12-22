@@ -9,8 +9,4 @@ const meta: Meta<typeof Heading> = {
 export default meta
 type Story = StoryObj<typeof Heading>
 
-export const Primary: Story = {
-  args: {
-    children: 'Most popular'
-  }
-}
+export const Primary: Story = { args: { children: 'Most popular' } }

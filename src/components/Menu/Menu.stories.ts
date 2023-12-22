@@ -10,9 +10,6 @@ type Story = StoryObj<typeof Menu>
 
 export const Primary: Story = {
   parameters: {
-    layout: 'fullscreen',
-    backgrounds: {
-      default: 'dark'
-    }
+    layout: 'fullscreen'
   }
 }
