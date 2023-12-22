@@ -1,3 +1,4 @@
+import { darken } from 'polished'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -41,8 +42,14 @@ const config: Config = {
       },
 
       colors: {
-        primary: '#F231A5',
-        secondary: '#3CD3C1',
+        primary: {
+          DEFAULT: '#F231A5',
+          dark: darken(0.2, '#F231A5')
+        },
+        secondary: {
+          DEFAULT: '#3CD3C1',
+          dark: darken(0.2, '#3CD3C1')
+        },
         white: '#FAFAFA',
         black: '#030517',
         gray: {

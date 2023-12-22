@@ -27,7 +27,7 @@ const MenuLink = ({
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <a
     className={twMerge(
-      "relative text-md mx-sm mt-1 text-white text-center hover:after:content-[''] hover:after:absolute hover:after:block hover:after:h-1 hover:after:bg-primary hover:after:animate-underline-grow",
+      'relative text-md mx-sm mt-1 text-white text-center hover:after:absolute hover:after:block hover:after:h-1 hover:after:bg-primary hover:after:animate-underline-grow',
       className
     )}
     {...props}
@@ -45,7 +45,7 @@ export const Menu = ({ username }: MenuProps) => {
     isOpen ? 'translate-y-0' : 'translate-y-12'
   }`
 
-  const menuLinkMobileClasses = `text-black text-bold text-xl mb-sm ${transitionUp}`
+  const menuLinkMobileClasses = `text-black font-bold text-xl mb-sm ${transitionUp}`
 
   return (
     <menu className="flex items-center py-sm relative">

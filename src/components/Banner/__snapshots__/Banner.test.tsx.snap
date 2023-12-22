@@ -14,12 +14,12 @@ exports[`<Banner /> should render correctly 1`] = `
     class="w-full bg-[rgba(0, 0, 0, 0.7)] p-sm md:rounded-b md:p-lg md:absolute md:bottom-0 md:left-0"
   >
     <h2
-      class="text-lg text-bold text-white md:text-xxl"
+      class="text-lg font-bold text-white md:text-xxl"
     >
       Defy death
     </h2>
     <h3
-      class="text-white text-sm mb-xs md:text-lg [&_strong]:text-primary [&_strong]:text-bold"
+      class="text-white text-sm mb-xs md:text-lg [&_strong]:text-primary [&_strong]:font-bold"
     >
       <p>
         Play the new 

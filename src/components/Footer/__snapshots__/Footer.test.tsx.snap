@@ -94,7 +94,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <h2
-        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:content-[''] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
+        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
       >
         Contact Us
       </h2>
@@ -108,7 +108,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <h2
-        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:content-[''] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
+        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
       >
         Follow us
       </h2>
@@ -149,7 +149,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <h2
-        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:content-[''] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
+        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
       >
         Links
       </h2>
@@ -177,7 +177,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <h2
-        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:content-[''] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
+        class="relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:border-b-[5px] border-secondary after:border-secondary text-md after:w-7 text-black font-bold uppercase"
       >
         Location
       </h2>

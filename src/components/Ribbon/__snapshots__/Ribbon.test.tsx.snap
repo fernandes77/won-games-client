@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Ribbon /> should render the text correctly 1`] = `
+<div
+  class="bg-primary text-sm h-9 px-sm right-[-20px] before:top-9 before:border-t-[10px] before:border-r-[20px] before:border-t-primary-dark before:border-l-primary-dark
+    absolute top-xs flex items-center font-bold text-white
+    before:absolute before:right-0 before:border-solid before:border-l-0
+    before:border-r-transparent before:border-b-transparent before:border-b-[0.625rem]
+    "
+>
+  Best Seller
+</div>
+`;
