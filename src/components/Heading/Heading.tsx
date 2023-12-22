@@ -1,4 +1,4 @@
-interface HeadingProps {
+type HeadingProps = {
   children: React.ReactNode
   color?: 'white' | 'black'
   lineLeft?: boolean

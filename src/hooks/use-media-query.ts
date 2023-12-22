@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 
-export interface UseMediaQueryOptions {
+type UseMediaQueryOptions = {
   getInitialValueInEffect: boolean
 }
 

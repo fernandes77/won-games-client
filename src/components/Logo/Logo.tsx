@@ -1,6 +1,6 @@
 import { useMediaQuery } from '@/hooks/use-media-query'
 
-interface LogoProps {
+type LogoProps = {
   color?: 'white' | 'black'
   size?: 'normal' | 'large'
   hideTextOnMobile?: boolean
