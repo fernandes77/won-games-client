@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Banner /> should render correctly 1`] = `
+<div
+  class="relative md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]"
+>
+  <div
+    aria-label="Defy death"
+    class="w-full h-56 bg-gray-light bg-center bg-cover md:h-[36rem]"
+    role="img"
+    style="background-image: url(https://source.unsplash.com/user/willianjusten/1042x580);"
+  />
+  <div
+    class="w-full bg-[rgba(0, 0, 0, 0.7)] p-sm md:rounded-b md:p-lg md:absolute md:bottom-0 md:left-0"
+  >
+    <h2
+      class="text-lg text-bold text-white md:text-xxl"
+    >
+      Defy death
+    </h2>
+    <h3
+      class="text-white text-sm mb-xs md:text-lg [&_strong]:text-primary [&_strong]:text-bold"
+    >
+      <p>
+        Play the new 
+        <strong>
+          CrashLands
+        </strong>
+         season
+      </p>
+    </h3>
+    <a
+      class="h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]"
+      href="/games/defy-death"
+    >
+      <span
+        class=""
+      >
+        Buy now
+      </span>
+    </a>
+  </div>
+</div>
+`;

@@ -48,7 +48,7 @@ describe('<Button />', () => {
 
   it('should render Button as a link', () => {
     render(
-      <Button as={{ type: 'a', props: { href: '/link' } }}>Buy now</Button>
+      <Button as={{ type: 'link', props: { href: '/link' } }}>Buy now</Button>
     )
 
     expect(screen.getByRole('link', { name: /buy now/i })).toHaveAttribute(
