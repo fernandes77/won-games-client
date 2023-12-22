@@ -1,3 +1,5 @@
+import { twMerge } from 'tailwind-merge'
+
 type LineColors = 'primary' | 'secondary'
 
 type HeadingProps = {
@@ -7,6 +9,7 @@ type HeadingProps = {
   lineBottom?: boolean
   lineColor?: LineColors
   size?: 'sm' | 'md'
+  className?: string
 }
 
 export const headingLineLeftClasses = 'pl-2 border-l-8'
@@ -23,7 +26,8 @@ export const Heading = ({
   lineLeft = false,
   lineBottom = false,
   lineColor = 'primary',
-  size = 'md'
+  size = 'md',
+  className
 }: HeadingProps) => {
   const lineLeftStyle = lineLeft ? headingLineLeftClasses : ''
   const lineBottomStyle = lineBottom ? headingLineBottomClasses : ''
@@ -31,7 +35,10 @@ export const Heading = ({
 
   return (
     <h2
-      className={`${lineLeftStyle} ${lineBottomStyle} ${lineColorStyle} ${headingSizeClassesMap[size]} text-${color} font-bold`}
+      className={twMerge(
+        `${lineLeftStyle} ${lineBottomStyle} ${lineColorStyle} ${headingSizeClassesMap[size]} text-${color} font-bold`,
+        className
+      )}
     >
       {children}
     </h2>
