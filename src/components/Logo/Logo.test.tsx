@@ -1,6 +1,6 @@
 import { renderWithTheme, resizeScreenSize } from '@/utils/tests/helpers'
 import { screen } from '@testing-library/react'
-import { Logo } from './Logo'
+import { Logo, logoSizeClassesMap } from './Logo'
 
 describe('<Logo />', () => {
   it('should render a white label by default', () => {
@@ -20,14 +20,14 @@ describe('<Logo />', () => {
   it('should render a normal logo when size is default', () => {
     renderWithTheme(<Logo />)
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveClass(
-      'w-28 h-8'
+      logoSizeClassesMap.normal
     )
   })
 
   it('should render a bigger logo', () => {
     renderWithTheme(<Logo size="large" />)
     expect(screen.getByLabelText(/Won Games/i).parentElement).toHaveClass(
-      'w-48 h-14'
+      logoSizeClassesMap.large
     )
   })
 

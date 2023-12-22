@@ -6,6 +6,11 @@ type LogoProps = {
   hideTextOnMobile?: boolean
 }
 
+export const logoSizeClassesMap = {
+  normal: 'w-28 h-8',
+  large: 'w-48 h-14'
+}
+
 export const Logo = ({
   color = 'white',
   size = 'normal',
@@ -17,9 +22,7 @@ export const Logo = ({
   const colorClasses = `text-${color}`
   const sizeClasses = shouldApplyHideOnMobile
     ? 'w-14 h-11'
-    : size === 'normal'
-      ? 'w-28 h-8'
-      : 'w-48 h-14'
+    : logoSizeClassesMap[size]
 
   return (
     <div className={`${colorClasses} ${sizeClasses}`}>
