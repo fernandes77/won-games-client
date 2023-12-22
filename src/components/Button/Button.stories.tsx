@@ -15,3 +15,6 @@ export const Primary: Story = {
 export const WithIcon: Story = {
   args: { children: 'Buy now', icon: <IconShoppingCartPlus /> }
 }
+export const AsLink: Story = {
+  args: { children: 'Buy now', as: { type: 'a' } }
+}
