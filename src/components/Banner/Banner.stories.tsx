@@ -16,5 +16,12 @@ export const Primary: Story = {
     subtitle: '<p>Play the new <strong>CrashLands</strong> season',
     title: 'Defy death'
   },
-  parameters: { layout: 'fullscreen' }
+  parameters: { layout: 'fullscreen' },
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '65rem', margin: '0 auto' }}>
+        <Story />
+      </div>
+    )
+  ]
 }

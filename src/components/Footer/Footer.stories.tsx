@@ -8,4 +8,12 @@ const meta: Meta<typeof Footer> = {
 export default meta
 type Story = StoryObj<typeof Footer>
 
-export const Primary: Story = {}
+export const Primary: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: '65rem', margin: '0 auto' }}>
+        <Story />
+      </div>
+    )
+  ]
+}
