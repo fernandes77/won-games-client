@@ -1,34 +1,68 @@
-import { renderWithTheme } from '@/utils/tests/helpers'
-import { screen } from '@testing-library/react'
-
-import { Heading, lineBottomClasses, lineLeftClasses } from './Heading'
+import { render, screen } from '@/utils/tests/helpers'
+import {
+  Heading,
+  headingLineBottomClasses,
+  headingLineLeftClasses,
+  headingSizeClassesMap
+} from './Heading'
 
 describe('<Heading />', () => {
   it('should render a white heading by default', () => {
-    renderWithTheme(<Heading>Won Games</Heading>)
+    render(<Heading>Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
       'text-white'
     )
   })
 
   it('should render a black heading when color is passed', () => {
-    renderWithTheme(<Heading color="black">Won Games</Heading>)
+    render(<Heading color="black">Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
       'text-black'
     )
   })
 
   it('should render a heading with a line to the left side', () => {
-    renderWithTheme(<Heading lineLeft>Won Games</Heading>)
+    render(<Heading lineLeft>Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
-      lineLeftClasses
+      headingLineLeftClasses
     )
   })
 
   it('should render a heading with a line at the bottom', () => {
-    renderWithTheme(<Heading lineBottom>Won Games</Heading>)
+    render(<Heading lineBottom>Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
-      lineBottomClasses
+      headingLineBottomClasses
+    )
+  })
+
+  it('should render a heading with a small size', () => {
+    render(<Heading size="sm">Won Games</Heading>)
+    expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
+      headingSizeClassesMap.sm
+    )
+  })
+
+  it('should render a Heading with a primary line color', () => {
+    render(
+      <Heading lineColor="primary" lineLeft lineBottom>
+        Lorem Ipsum
+      </Heading>
+    )
+
+    expect(screen.getByRole('heading', { name: /lorem ipsum/i })).toHaveClass(
+      `${headingLineLeftClasses} ${headingLineBottomClasses} border-primary`
+    )
+  })
+
+  it('should render a Heading with a secondary line color', () => {
+    render(
+      <Heading lineColor="secondary" lineLeft lineBottom>
+        Lorem Ipsum
+      </Heading>
+    )
+
+    expect(screen.getByRole('heading', { name: /lorem ipsum/i })).toHaveClass(
+      `${headingLineLeftClasses} ${headingLineBottomClasses} border-secondary`
     )
   })
 })

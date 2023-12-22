@@ -1,25 +1,18 @@
-import { RenderResult, render } from '@testing-library/react'
-import mediaQuery from 'css-mediaquery'
+import { RenderOptions, render } from '@testing-library/react'
+import React, { ReactElement } from 'react'
 
-export function renderWithTheme(children: React.ReactNode): RenderResult {
-  return render(<>{children}</>)
+const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
 }
 
-function createMatchMedia(width: number) {
-  return (query: string) => {
-    return {
-      matches: mediaQuery.match(query, { width }),
-      media: '',
-      addListener: () => {},
-      removeListener: () => {},
-      onchange: () => {},
-      addEventListener: () => {},
-      removeEventListener: () => {},
-      dispatchEvent: () => true
-    }
-  }
+const customRender = (
+  ui: ReactElement,
+  options?: Omit<RenderOptions, 'wrapper'>
+) => {
+  const view = render(ui, { wrapper: AllTheProviders, ...options })
+
+  return view
 }
 
-export function resizeScreenSize(width: number) {
-  window.matchMedia = createMatchMedia(width)
-}
+export * from '@testing-library/react'
+export { customRender as render }
