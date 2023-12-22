@@ -61,7 +61,16 @@ const config: Config = {
         overlay: '30',
         modal: '40',
         alwaysOnTop: '50'
-      }
+      },
+
+      keyframes: {
+        'grow-from-center': {
+          from: { width: '0', left: '50%' },
+          to: { width: '100%', left: '0' }
+        }
+      },
+
+      animation: { 'underline-grow': 'grow-from-center 0.2s forwards' }
     }
   },
   plugins: []
