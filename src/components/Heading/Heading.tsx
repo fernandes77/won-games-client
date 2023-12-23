@@ -1,5 +1,3 @@
-import { twMerge } from 'tailwind-merge'
-
 type LineColors = 'primary' | 'secondary'
 
 type HeadingProps = {
@@ -9,15 +7,6 @@ type HeadingProps = {
   lineBottom?: boolean
   lineColor?: LineColors
   size?: 'sm' | 'md'
-  className?: string
-}
-
-export const headingLineLeftClasses = 'pl-2 border-l-8'
-export const headingLineBottomClasses =
-  'relative mb-md after:absolute after:left-0 after:bottom-[-0.5rem] after:w-14 after:border-b-[5px]'
-export const headingSizeClassesMap = {
-  sm: 'text-md after:w-7',
-  md: 'text-xl md:text-xxl'
 }
 
 export const Heading = ({
@@ -26,21 +15,31 @@ export const Heading = ({
   lineLeft = false,
   lineBottom = false,
   lineColor = 'primary',
-  size = 'md',
-  className
+  size = 'md'
 }: HeadingProps) => {
+  const headingSizeClassesMap = {
+    sm: 'text-md',
+    md: 'text-xl md:text-xxl'
+  }
+  const headingLineLeftClasses = `pl-2 border-l-[7px] border-${lineColor}`
   const lineLeftStyle = lineLeft ? headingLineLeftClasses : ''
-  const lineBottomStyle = lineBottom ? headingLineBottomClasses : ''
-  const lineColorStyle = `border-${lineColor} after:border-${lineColor}`
+  const lineBottomSizeClassesMap = { sm: 'w-7', md: 'w-14' }
 
   return (
-    <h2
-      className={twMerge(
-        `${lineLeftStyle} ${lineBottomStyle} ${lineColorStyle} ${headingSizeClassesMap[size]} text-${color} font-bold`,
-        className
+    <div className="relative">
+      <h2
+        className={`${lineLeftStyle} ${headingSizeClassesMap[size]} text-${color} font-bold mb-md`}
+      >
+        {children}
+      </h2>
+
+      {lineBottom && (
+        <div
+          data-testid="heading-line-bottom"
+          className={`absolute left-0 bottom-[-5px] border-b-[5px]
+          border-${lineColor} ${lineBottomSizeClassesMap[size]}`}
+        />
       )}
-    >
-      {children}
-    </h2>
+    </div>
   )
 }

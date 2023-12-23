@@ -1,10 +1,5 @@
 import { render, screen } from '@/utils/tests/helpers'
-import {
-  Heading,
-  headingLineBottomClasses,
-  headingLineLeftClasses,
-  headingSizeClassesMap
-} from './Heading'
+import { Heading } from './Heading'
 
 describe('<Heading />', () => {
   it('should render a white heading by default', () => {
@@ -24,21 +19,19 @@ describe('<Heading />', () => {
   it('should render a heading with a line to the left side', () => {
     render(<Heading lineLeft>Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
-      headingLineLeftClasses
+      'pl-2 border-l-[7px]'
     )
   })
 
   it('should render a heading with a line at the bottom', () => {
     render(<Heading lineBottom>Won Games</Heading>)
-    expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
-      headingLineBottomClasses
-    )
+    expect(screen.getByTestId('heading-line-bottom')).toBeInTheDocument()
   })
 
   it('should render a heading with a small size', () => {
     render(<Heading size="sm">Won Games</Heading>)
     expect(screen.getByRole('heading', { name: /won games/i })).toHaveClass(
-      headingSizeClassesMap.sm
+      'text-md'
     )
   })
 
@@ -50,7 +43,10 @@ describe('<Heading />', () => {
     )
 
     expect(screen.getByRole('heading', { name: /lorem ipsum/i })).toHaveClass(
-      `${headingLineLeftClasses} ${headingLineBottomClasses} border-primary`
+      `border-l-[7px] border-primary`
+    )
+    expect(screen.getByTestId('heading-line-bottom')).toHaveClass(
+      'border-b-[5px] border-primary'
     )
   })
 
@@ -62,7 +58,10 @@ describe('<Heading />', () => {
     )
 
     expect(screen.getByRole('heading', { name: /lorem ipsum/i })).toHaveClass(
-      `${headingLineLeftClasses} ${headingLineBottomClasses} border-secondary`
+      `border-l-[7px] border-secondary`
+    )
+    expect(screen.getByTestId('heading-line-bottom')).toHaveClass(
+      'border-b-[5px] border-secondary'
     )
   })
 })
