@@ -6,7 +6,7 @@ type RibbonProps = {
 
 export const ribbonSizeMap = {
   md: 'text-sm h-9 px-sm right-[-20px] before:top-9 before:border-t-[10px] before:border-r-[20px]',
-  sm: 'text-xs h-6 px-xs right-[-15px] before:top-[26px] before:border-t-[7px] before:border-r-[15px]'
+  sm: 'text-xs h-[1.625rem] px-xs right-[-15px] before:top-[26px] before:border-t-[7px] before:border-r-[15px]'
 }
 
 export const Ribbon = ({
