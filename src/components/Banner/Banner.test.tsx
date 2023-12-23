@@ -25,4 +25,21 @@ describe('<Banner />', () => {
 
     expect(container.firstChild).toMatchSnapshot()
   })
+
+  it('should render a Ribbon', () => {
+    render(
+      <Banner
+        {...props}
+        ribbon="My Ribbon"
+        ribbonSize="sm"
+        ribbonColor="secondary"
+      />
+    )
+
+    const ribbon = screen.getByText(/My Ribbon/i)
+
+    expect(ribbon).toBeInTheDocument()
+    expect(ribbon).toHaveClass('bg-secondary')
+    expect(ribbon).toHaveClass('text-xs h-[1.625rem]')
+  })
 })
