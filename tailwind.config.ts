@@ -1,3 +1,4 @@
+import tailwindCssGridAreas from '@savvywombat/tailwindcss-grid-areas'
 import { darken } from 'polished'
 import type { Config } from 'tailwindcss'
 
@@ -80,6 +81,6 @@ const config: Config = {
       animation: { 'underline-grow': 'grow-from-center 0.2s forwards' }
     }
   },
-  plugins: []
+  plugins: [tailwindCssGridAreas]
 }
 export default config

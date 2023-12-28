@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Highlight /> should render headings and button 1`] = `
+<div
+  class="relative grid grid-areas-[floatimage_content] grid-cols-[1.3fr_2fr] h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] md:h-80
+    after:absolute after:w-full after:h-full after:bg-[rgba(0, 0, 0, 0.6)]
+    "
+  style="background-image: url(/img/red-dead-img.jpg);"
+>
+  <div
+    class="z-base p-xs grid-in-[content] md:self-end md:p-lg text-right"
+  >
+    <h2
+      class="text-lg font-bold text-white md:text-xxl"
+    >
+      Heading 1
+    </h2>
+    <h3
+      class="text-sm font-light text-white mb-md md:text-lg"
+    >
+      Heading 2
+    </h3>
+    <a
+      class="h-10 text-sm px-md py-xxs inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]"
+      href="/games/rdr2"
+    >
+      <span
+        class=""
+      >
+        Buy now
+      </span>
+    </a>
+  </div>
+</div>
+`;
