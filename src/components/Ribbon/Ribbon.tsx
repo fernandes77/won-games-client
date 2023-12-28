@@ -1,14 +1,14 @@
+import { Children } from '@/types/children'
 import { twMerge } from 'tailwind-merge'
 
 export type RibbonColors = 'primary' | 'secondary'
 export type RibbonSizes = 'md' | 'sm'
 
 type RibbonProps = {
-  children: React.ReactNode
   color?: 'primary' | 'secondary'
   size?: 'md' | 'sm'
   className?: string
-}
+} & Children
 
 export const ribbonSizeMap = {
   md: 'text-sm h-9 px-sm right-[-20px] before:top-9 before:border-t-[10px] before:border-r-[20px]',

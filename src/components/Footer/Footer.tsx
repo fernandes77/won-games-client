@@ -1,8 +1,9 @@
 import { Heading } from '@/components/Heading/Heading'
 import { Logo } from '@/components/Logo/Logo'
+import { Children } from '@/types/children'
 import Link from 'next/link'
 
-const FooterHeading = ({ children }: { children: React.ReactNode }) => (
+const FooterHeading = ({ children }: Children) => (
   <Heading
     color="black"
     lineColor="secondary"
@@ -14,7 +15,7 @@ const FooterHeading = ({ children }: { children: React.ReactNode }) => (
   </Heading>
 )
 
-const Column = ({ children }: { children: React.ReactNode }) => (
+const Column = ({ children }: Children) => (
   <div className="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline">
     {children}
   </div>

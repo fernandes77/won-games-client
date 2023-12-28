@@ -75,10 +75,17 @@ const config: Config = {
         'grow-from-center': {
           from: { width: '0', left: '50%' },
           to: { width: '100%', left: '0' }
+        },
+        'placeholder-shimmer': {
+          from: { 'background-position': '-25rem 0' },
+          to: { 'background-position': '25rem 0' }
         }
       },
 
-      animation: { 'underline-grow': 'grow-from-center 0.2s forwards' }
+      animation: {
+        'underline-grow': 'grow-from-center 0.2s forwards',
+        'placeholder-shimmer': 'placeholderShimmer 1s linear infinite forwards'
+      }
     }
   },
   plugins: [tailwindCssGridAreas]

@@ -1,7 +1,8 @@
+import { Children } from '@/types/children'
 import { RenderOptions, render } from '@testing-library/react'
-import React, { ReactElement } from 'react'
+import { ReactElement } from 'react'
 
-const AllTheProviders = ({ children }: { children: React.ReactNode }) => {
+const AllTheProviders = ({ children }: Children) => {
   return <>{children}</>
 }
 
