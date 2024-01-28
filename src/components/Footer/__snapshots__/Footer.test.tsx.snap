@@ -94,7 +94,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <div
-        class="relative"
+        class="relative uppercase"
       >
         <h2
           class=" text-md text-black font-bold mb-md"
@@ -117,7 +117,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <div
-        class="relative"
+        class="relative uppercase"
       >
         <h2
           class=" text-md text-black font-bold mb-md"
@@ -167,7 +167,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <div
-        class="relative"
+        class="relative uppercase"
       >
         <h2
           class=" text-md text-black font-bold mb-md"
@@ -204,7 +204,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
     >
       <div
-        class="relative"
+        class="relative uppercase"
       >
         <h2
           class=" text-md text-black font-bold mb-md"
