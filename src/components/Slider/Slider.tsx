@@ -3,7 +3,7 @@ import './Slider.css'
 
 export type SliderSettings = Settings
 
-export type SliderProps = {
+type SliderProps = {
   children: React.ReactNode
   settings: SliderSettings
 }

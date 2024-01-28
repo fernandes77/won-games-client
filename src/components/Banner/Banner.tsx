@@ -29,7 +29,7 @@ export const Banner = ({
   const ribbonSpacingMap = { md: 'lg:right-[-20px]', sm: 'lg:right-[-14px]' }
 
   return (
-    <div className="relative md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]">
+    <div className="banner relative md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]">
       {!!ribbon && (
         <Ribbon
           className={`${ribbonSpacingMap[ribbonSize]} right-0 lg:flex [&::before]:hidden lg:[&::before]:block`}
