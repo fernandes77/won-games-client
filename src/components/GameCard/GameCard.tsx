@@ -11,7 +11,7 @@ import {
   IconShoppingCart
 } from '@tabler/icons-react'
 
-type GameCardProps = {
+export type GameCardProps = {
   title: string
   developer: string
   img: string
