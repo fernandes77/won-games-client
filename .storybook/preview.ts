@@ -10,7 +10,19 @@ const preview: Preview = {
         date: /Date$/i
       }
     },
-    backgrounds: { default: 'dark' }
+    backgrounds: {
+      default: 'won-light',
+      values: [
+        {
+          name: 'won-light',
+          value: '#fafafa'
+        },
+        {
+          name: 'won-dark',
+          value: '#06092B'
+        }
+      ]
+    }
   }
 }
 
