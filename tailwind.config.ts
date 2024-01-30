@@ -59,8 +59,8 @@ const config: Config = {
           DEFAULT: '#8F8F8F',
           dark: '#2E2F42'
         },
-        bg: {
-          main: '#06092B'
+        blue: {
+          dark: '#06092B'
         }
       },
 
