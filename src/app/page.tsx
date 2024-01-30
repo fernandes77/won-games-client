@@ -1,5 +1,3 @@
-'use client'
-
 import { Footer } from '@/components/Footer/Footer'
 import { Heading } from '@/components/Heading/Heading'
 import { Menu } from '@/components/Menu/Menu'
