@@ -2,24 +2,26 @@
 
 exports[`<Banner /> should render correctly 1`] = `
 <div
-  class="banner relative md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]"
+  class="banner relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]"
 >
   <div
     aria-label="Defy death"
-    class="w-full h-56 bg-gray-light bg-center bg-cover md:h-[36rem]"
+    class="w-full h-56 bg-gray-light bg-center bg-cover min-md:h-[36rem]"
     role="img"
     style="background-image: url(https://source.unsplash.com/user/willianjusten/1042x580);"
   />
   <div
-    class="w-full bg-[rgba(0, 0, 0, 0.7)] p-sm md:rounded-b md:p-lg md:absolute md:bottom-0 md:left-0"
+    class="w-full bg-[rgba(0, 0, 0, 0.7)] p-sm
+          min-lg:rounded-b min-lg:p-lg min-lg:absolute min-lg:bottom-0 min-lg:left-0
+        "
   >
     <h2
-      class="text-lg font-bold text-white md:text-xxl"
+      class="text-lg font-bold text-white min-md:text-xxl"
     >
       Defy death
     </h2>
     <h3
-      class="text-white text-sm mb-xs md:text-lg [&_strong]:text-primary [&_strong]:font-bold"
+      class="text-white text-sm mb-xs min-md:text-lg [&_strong]:text-primary [&_strong]:font-bold"
     >
       <p>
         Play the new 

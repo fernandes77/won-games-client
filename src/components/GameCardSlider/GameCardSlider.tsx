@@ -1,3 +1,5 @@
+'use client'
+
 import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
 import { Slider, SliderSettings } from '@/components/Slider/Slider'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'

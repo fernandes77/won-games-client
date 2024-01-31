@@ -1,5 +1,3 @@
-import { maxMd } from '@/utils/tailwind/breakpoints'
-
 type LogoProps = {
   color?: 'white' | 'black'
   size?: 'normal' | 'large'
@@ -18,7 +16,7 @@ export const Logo = ({
 }: LogoProps) => {
   const colorClasses = `text-${color}`
   const sizeClasses = hideTextOnMobile
-    ? maxMd('w-14 h-11')
+    ? 'max-md:w-14 max-md:h-11'
     : logoSizeClassesMap[size]
 
   return (
@@ -30,7 +28,9 @@ export const Logo = ({
         role="img"
         aria-label="Won Games"
         className={
-          hideTextOnMobile ? maxMd('h-11 pointer-events-none') : undefined
+          hideTextOnMobile
+            ? 'max-md:h-11 max-md:pointer-events-none'
+            : undefined
         }
       >
         <path

@@ -4,7 +4,6 @@ import {
   type RibbonColors,
   type RibbonSizes
 } from '@/components/Ribbon/Ribbon'
-import { minLg, minMd } from '@/utils/tailwind/breakpoints'
 
 export type BannerProps = {
   img: string
@@ -37,7 +36,7 @@ export const Banner = ({
       {!!ribbon && (
         <Ribbon
           className={`${ribbonSpacingMap[ribbonSize]}
-            ${minLg('flex [&::before]:block')} [&::before]:hidden
+            min-lg:flex max-lg:[&::before]:hidden
           `}
           color={ribbonColor}
           size={ribbonSize}
@@ -55,7 +54,7 @@ export const Banner = ({
 
       <div
         className={`w-full bg-[rgba(0, 0, 0, 0.7)] p-sm
-          ${minMd('rounded-b p-lg absolute bottom-0 left-0')}
+          min-lg:rounded-b min-lg:p-lg min-lg:absolute min-lg:bottom-0 min-lg:left-0
         `}
       >
         <h2 className="text-lg font-bold text-white min-md:text-xxl">

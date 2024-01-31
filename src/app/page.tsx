@@ -1,5 +1,6 @@
 import { BannerSlider } from '@/components/BannerSlider/BannerSlider'
 import banners from '@/components/BannerSlider/BannerSlider.mock'
+import { Container } from '@/components/Container/Container'
 import { Footer } from '@/components/Footer/Footer'
 import { GameCardSlider } from '@/components/GameCardSlider/GameCardSlider'
 import games from '@/components/GameCardSlider/GameCardSlider.mock'
@@ -8,25 +9,44 @@ import { Highlight } from '@/components/Highlight/Highlight'
 import highlight from '@/components/Highlight/Highlight.mock'
 import { Menu } from '@/components/Menu/Menu'
 import { Children } from '@/types/children'
+import { twMerge } from 'tailwind-merge'
 
-const HomeSection = ({ children }: Children) => (
-  <section className="[&>*]:mb-md md:[&_.highlight]:-mx-half-gutter">
+const HomeSection = ({
+  children,
+  className
+}: { className?: string } & Children) => (
+  <section
+    className={twMerge(
+      'mb-[5rem] [&>*]:mb-md max-md:[&_.highlight]:-mx-half-gutter max-huge:[&_.game-card-slider]:-mr-half-gutter',
+      className
+    )}
+  >
     {children}
   </section>
 )
 
 const BannerSection = () => (
-  <HomeSection>
+  <section className="my-lg -mx-half-gutter min-md:my-lg min-md:mx-0 relative z-base">
     <BannerSlider items={banners} />
-  </HomeSection>
+  </section>
 )
 
 const NewsSection = () => (
-  <HomeSection>
-    <Heading lineLeft lineColor="secondary">
-      News
-    </Heading>
-    <GameCardSlider items={games} color="black" />
+  <HomeSection
+    className="min-md:mb-0 min-md:pt-[8.75rem] min-md:pb-[6.25rem] min-md:bg-light
+    min-md:[clip-path:polygon(0_0,100%_15%,100%_100%,0_85%)] mb-[7rem] min-lg:mt-[-8.1rem]
+    "
+  >
+    <Container>
+      <Heading
+        lineLeft
+        lineColor="secondary"
+        className="md:[&_h2]:text-black [&_h2]:text-white"
+      >
+        News
+      </Heading>
+      <GameCardSlider items={games} color="black" />
+    </Container>
   </HomeSection>
 )
 
@@ -70,9 +90,11 @@ const FooterSection = () => (
 export default function Home() {
   return (
     <section>
-      <Menu />
+      <Container>
+        <Menu />
 
-      <BannerSection />
+        <BannerSection />
+      </Container>
 
       <NewsSection />
 

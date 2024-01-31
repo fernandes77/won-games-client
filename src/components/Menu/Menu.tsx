@@ -58,7 +58,7 @@ export const Menu = ({ username }: MenuProps) => {
         <IconMenu2 aria-label="Open Menu" />
       </IconWrapper>
 
-      <div className="absolute min-md:static left-1/2 min-md:left-0 translate-x-[-50%] min-md:translate-x-0">
+      <div className="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2">
         <Logo hideTextOnMobile />
       </div>
 

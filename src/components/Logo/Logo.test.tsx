@@ -34,6 +34,6 @@ describe('<Logo />', () => {
   it('should render a bigger logo without text if hideOnMobile', () => {
     resizeScreenSize(400)
     render(<Logo hideTextOnMobile />)
-    expect(screen.getByTestId('logo-text')).toHaveClass('hidden')
+    expect(screen.getByTestId('logo-text')).toHaveClass('max-md:hidden')
   })
 })

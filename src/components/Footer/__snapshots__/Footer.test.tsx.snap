@@ -88,7 +88,7 @@ exports[`<Footer /> should render 4 column topics 1`] = `
     </svg>
   </div>
   <div
-    class="grid grid-cols-2 gap-gutter mt-md md:grid-cols-4"
+    class="grid grid-cols-2 gap-gutter mt-md min-md:grid-cols-4"
   >
     <div
       class="text-gray text-sm [&_a]:block [&_span]:block [&_a]:mb-xxs [&_span]:mb-xxs hover:[&_a]:underline"
