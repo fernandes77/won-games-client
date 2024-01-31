@@ -59,7 +59,7 @@ export const Menu = ({ username }: MenuProps) => {
         <Logo hideTextOnMobile />
       </div>
 
-      <div className="hidden md:block flex flex-col items-center justify-center flex-1 md:ml-sm">
+      <div className="md:block flex flex-col items-center justify-center flex-1 md:ml-sm">
         <MenuLink href="#">Home</MenuLink>
         <MenuLink href="#">Explore</MenuLink>
       </div>

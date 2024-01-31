@@ -1,3 +1,5 @@
+'use client'
+
 import { Banner, BannerProps } from '@/components/Banner/Banner'
 import { Slider, SliderSettings } from '@/components/Slider/Slider'
 import './BannerSlider.css'

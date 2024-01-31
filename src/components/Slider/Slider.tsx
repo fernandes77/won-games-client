@@ -1,3 +1,5 @@
+'use client'
+
 import SlickSlider, { Settings } from 'react-slick'
 import './Slider.css'
 
