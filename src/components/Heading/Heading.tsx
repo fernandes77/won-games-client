@@ -23,7 +23,7 @@ export const Heading = ({
 }: HeadingProps) => {
   const headingSizeClassesMap = {
     sm: 'text-md',
-    md: 'text-xl md:text-xxl'
+    md: 'text-xl min-md:text-xxl'
   }
   const headingLineLeftClasses = `pl-2 border-l-[7px] border-${lineColor}`
   const lineLeftStyle = lineLeft ? headingLineLeftClasses : ''

@@ -28,23 +28,25 @@ export const Highlight = ({
   return (
     <div
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      className={`relative grid ${alignmentMap[alignment]} h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] md:h-80
+      className={`highlight relative grid ${alignmentMap[alignment]} h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] min-md:h-80
     after:absolute after:w-full after:h-full after:bg-[rgba(0, 0, 0, 0.6)]
     `}
     >
       {!!floatImage && (
         <img
           className={`${justifyFloatImageMap[alignment]} grid-in-[floatimage]
-          z-base max-h-56 max-w-full self-end md:max-h-80`}
+          z-base max-h-56 max-w-full self-end min-md:max-h-80`}
           src={floatImage}
           alt={title}
         />
       )}
       <div
-        className={`z-base p-xs grid-in-[content] md:self-end md:p-lg text-${alignment}`}
+        className={`z-base p-xs grid-in-[content] min-md:self-end min-md:p-lg text-${alignment}`}
       >
-        <h2 className="text-lg font-bold text-white md:text-xxl">{title}</h2>
-        <h3 className="text-sm font-light text-white mb-md md:text-lg">
+        <h2 className="text-lg font-bold text-white min-md:text-xxl">
+          {title}
+        </h2>
+        <h3 className="text-sm font-light text-white mb-md min-md:text-lg">
           {subtitle}
         </h3>
         <Button as={{ type: 'link', props: { href: buttonLink } }}>

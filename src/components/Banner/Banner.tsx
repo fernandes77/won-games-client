@@ -4,6 +4,7 @@ import {
   type RibbonColors,
   type RibbonSizes
 } from '@/components/Ribbon/Ribbon'
+import { minLg, minMd } from '@/utils/tailwind/breakpoints'
 
 export type BannerProps = {
   img: string
@@ -26,13 +27,18 @@ export const Banner = ({
   ribbonColor = 'primary',
   ribbonSize = 'md'
 }: BannerProps) => {
-  const ribbonSpacingMap = { md: 'lg:right-[-20px]', sm: 'lg:right-[-14px]' }
+  const ribbonSpacingMap = {
+    md: 'min-lg:right-[-20px]',
+    sm: 'min-lg:right-[-14px]'
+  }
 
   return (
-    <div className="banner relative md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]">
+    <div className="banner relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]">
       {!!ribbon && (
         <Ribbon
-          className={`${ribbonSpacingMap[ribbonSize]} right-0 lg:flex [&::before]:hidden lg:[&::before]:block`}
+          className={`${ribbonSpacingMap[ribbonSize]}
+            ${minLg('flex [&::before]:block')} [&::before]:hidden
+          `}
           color={ribbonColor}
           size={ribbonSize}
         >
@@ -41,16 +47,22 @@ export const Banner = ({
       )}
 
       <div
-        className={`w-full h-56 bg-gray-light bg-center bg-cover md:h-[36rem]`}
+        className={`w-full h-56 bg-gray-light bg-center bg-cover min-md:h-[36rem]`}
         role="img"
         aria-label={title}
         style={{ backgroundImage: `url(${img})` }}
       />
 
-      <div className="w-full bg-[rgba(0, 0, 0, 0.7)] p-sm md:rounded-b md:p-lg md:absolute md:bottom-0 md:left-0">
-        <h2 className="text-lg font-bold text-white md:text-xxl">{title}</h2>
+      <div
+        className={`w-full bg-[rgba(0, 0, 0, 0.7)] p-sm
+          ${minMd('rounded-b p-lg absolute bottom-0 left-0')}
+        `}
+      >
+        <h2 className="text-lg font-bold text-white min-md:text-xxl">
+          {title}
+        </h2>
         <h3
-          className="text-white text-sm mb-xs md:text-lg [&_strong]:text-primary [&_strong]:font-bold"
+          className="text-white text-sm mb-xs min-md:text-lg [&_strong]:text-primary [&_strong]:font-bold"
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
         <Button as={{ type: 'link', props: { href: buttonLink } }} size="lg">

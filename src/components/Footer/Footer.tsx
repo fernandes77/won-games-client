@@ -24,7 +24,7 @@ const Column = ({ children }: Children) => (
 export const Footer = () => (
   <footer>
     <Logo color="black" />
-    <div className="grid grid-cols-2 gap-gutter mt-md md:grid-cols-4">
+    <div className="grid grid-cols-2 gap-gutter mt-md min-md:grid-cols-4">
       <Column>
         <FooterHeading>Contact Us</FooterHeading>
 

@@ -8,7 +8,7 @@ import {
   IconShoppingCart,
   IconX
 } from '@tabler/icons-react'
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
 type IconWrapperProps = React.HTMLAttributes<HTMLDivElement>
@@ -51,15 +51,18 @@ export const Menu = ({ username }: MenuProps) => {
 
   return (
     <menu className="flex items-center py-sm relative">
-      <IconWrapper className="block md:hidden" onClick={() => setIsOpen(true)}>
+      <IconWrapper
+        className="block min-md:hidden"
+        onClick={() => setIsOpen(true)}
+      >
         <IconMenu2 aria-label="Open Menu" />
       </IconWrapper>
 
-      <div className="absolute md:static left-1/2 md:left-0 translate-x-[-50%] md:translate-x-0">
+      <div className="absolute min-md:static left-1/2 min-md:left-0 translate-x-[-50%] min-md:translate-x-0">
         <Logo hideTextOnMobile />
       </div>
 
-      <div className="md:block flex flex-col items-center justify-center flex-1 md:ml-sm">
+      <div className="min-md:block flex flex-col items-center justify-center flex-1 min-md:ml-sm">
         <MenuLink href="#">Home</MenuLink>
         <MenuLink href="#">Explore</MenuLink>
       </div>
@@ -75,13 +78,13 @@ export const Menu = ({ username }: MenuProps) => {
 
         {!username && (
           <div>
-            <Button className="hidden md:block">Sign in</Button>
+            <Button className="hidden min-md:block">Sign in</Button>
           </div>
         )}
       </div>
 
       <nav
-        className={`flex flex-col justify-between bg-white absolute top-0 bottom-0 left-0 right-0
+        className={`flex flex-col justify-between bg-white fixed z-menu top-0 bottom-0 left-0 right-0
         h-screen overflow-hidden transition-opacity ease-in-out duration-300
         ${
           isOpen
@@ -97,7 +100,7 @@ export const Menu = ({ username }: MenuProps) => {
           onClick={() => setIsOpen(false)}
         />
 
-        <div className="flex flex-col items-center justify-center flex-1 md:ml-sm">
+        <div className="flex flex-col items-center justify-center flex-1 min-md:ml-sm">
           <MenuLink className={menuLinkMobileClasses} href="#">
             Home
           </MenuLink>

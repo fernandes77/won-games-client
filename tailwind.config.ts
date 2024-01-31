@@ -53,6 +53,7 @@ const config: Config = {
           dark: darken(0.2, '#3CD3C1')
         },
         white: '#FAFAFA',
+        light: '#F2F2F2',
         black: '#030517',
         gray: {
           light: '#EAEAEA',
@@ -62,6 +63,17 @@ const config: Config = {
         blue: {
           dark: '#06092B'
         }
+      },
+
+      screens: {
+        'min-huge': '1440px',
+        'max-huge': { max: '1439px' },
+        'min-lg': '1170px',
+        'max-lg': { max: '1169px' },
+        'min-md': '768px',
+        'max-md': { max: '767px' },
+        'min-sm': '450px',
+        'max-sm': { max: '449px' }
       },
 
       zIndex: {
