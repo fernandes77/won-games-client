@@ -12,6 +12,16 @@ type HeadingProps = {
   className?: string
 } & Children
 
+const colorMap = {
+  black: 'text-black',
+  white: 'text-white'
+}
+
+const lineColorMap = {
+  primary: 'border-primary',
+  secondary: 'border-secondary'
+}
+
 export const Heading = ({
   children,
   color = 'white',
@@ -25,14 +35,14 @@ export const Heading = ({
     sm: 'text-md',
     md: 'text-xl min-md:text-xxl'
   }
-  const headingLineLeftClasses = `pl-2 border-l-[7px] border-${lineColor}`
+  const headingLineLeftClasses = `pl-2 border-l-[7px] ${lineColorMap[lineColor]}`
   const lineLeftStyle = lineLeft ? headingLineLeftClasses : ''
   const lineBottomSizeClassesMap = { sm: 'w-7', md: 'w-14' }
 
   return (
     <div className={twMerge('relative', className)}>
       <h2
-        className={`${lineLeftStyle} ${headingSizeClassesMap[size]} text-${color} font-bold mb-md`}
+        className={`${lineLeftStyle} ${headingSizeClassesMap[size]} ${colorMap[color]} font-bold mb-md`}
       >
         {children}
       </h2>
@@ -41,7 +51,7 @@ export const Heading = ({
         <div
           data-testid="heading-line-bottom"
           className={`absolute left-0 bottom-[-5px] border-b-[5px]
-          border-${lineColor} ${lineBottomSizeClassesMap[size]}`}
+          ${lineColorMap[lineColor]} ${lineBottomSizeClassesMap[size]}`}
         />
       )}
     </div>

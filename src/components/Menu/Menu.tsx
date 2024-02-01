@@ -50,11 +50,8 @@ export const Menu = ({ username }: MenuProps) => {
   const menuLinkMobileClasses = `text-black font-bold text-xl mb-sm ${transitionUp}`
 
   return (
-    <menu className="flex items-center py-sm relative">
-      <IconWrapper
-        className="block min-md:hidden"
-        onClick={() => setIsOpen(true)}
-      >
+    <menu className="flex items-center py-sm px-0 relative">
+      <IconWrapper className="min-md:hidden" onClick={() => setIsOpen(true)}>
         <IconMenu2 aria-label="Open Menu" />
       </IconWrapper>
 
@@ -62,7 +59,7 @@ export const Menu = ({ username }: MenuProps) => {
         <Logo hideTextOnMobile />
       </div>
 
-      <div className="min-md:block flex flex-col items-center justify-center flex-1 min-md:ml-sm">
+      <div className="max-md:hidden min-md:ml-sm">
         <MenuLink href="#">Home</MenuLink>
         <MenuLink href="#">Explore</MenuLink>
       </div>

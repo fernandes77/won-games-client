@@ -24,6 +24,7 @@ export const Highlight = ({
     right: 'grid-areas-[floatimage_content] grid-cols-[1.3fr_2fr]'
   }
   const justifyFloatImageMap = { left: 'justify-self-end', right: '' }
+  const textAlignmentMap = { left: 'text-left', right: 'text-right' }
 
   return (
     <div
@@ -41,7 +42,7 @@ export const Highlight = ({
         />
       )}
       <div
-        className={`z-base p-xs grid-in-[content] min-md:self-end min-md:p-lg text-${alignment}`}
+        className={`z-base p-xs grid-in-[content] min-md:self-end min-md:p-lg ${textAlignmentMap[alignment]}`}
       >
         <h2 className="text-lg font-bold text-white min-md:text-xxl">
           {title}

@@ -36,7 +36,7 @@ export const Banner = ({
       {!!ribbon && (
         <Ribbon
           className={`${ribbonSpacingMap[ribbonSize]}
-            min-lg:flex max-lg:[&::before]:hidden
+            min-lg:flex max-lg:before:hidden max-lg:right-0
           `}
           color={ribbonColor}
           size={ribbonSize}

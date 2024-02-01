@@ -61,7 +61,7 @@ const MostPopularSection = () => (
 )
 
 const UpcomingSection = () => (
-  <HomeSection>
+  <HomeSection className="[&_.highlight]:mt-[6rem]">
     <Heading lineLeft lineColor="secondary">
       Upcoming
     </Heading>
@@ -82,9 +82,14 @@ const FreeGamesSection = () => (
 )
 
 const FooterSection = () => (
-  <HomeSection>
-    <Footer />
-  </HomeSection>
+  <section
+    className="mt-lg pb-xs pt-xxl bg-white [clip-path:polygon(0_5%,100%_0%,100%_100%,0_100%)]
+    min-md:pt-[7rem] min-md:[clip-path:polygon(0_5%,100%_0%,100%_100%,0_100%)]"
+  >
+    <Container>
+      <Footer />
+    </Container>
+  </section>
 )
 
 export default function Home() {
@@ -98,11 +103,13 @@ export default function Home() {
 
       <NewsSection />
 
-      <MostPopularSection />
+      <Container>
+        <MostPopularSection />
 
-      <UpcomingSection />
+        <UpcomingSection />
 
-      <FreeGamesSection />
+        <FreeGamesSection />
+      </Container>
 
       <FooterSection />
     </section>

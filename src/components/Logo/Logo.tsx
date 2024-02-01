@@ -14,13 +14,13 @@ export const Logo = ({
   size = 'normal',
   hideTextOnMobile = false
 }: LogoProps) => {
-  const colorClasses = `text-${color}`
-  const sizeClasses = hideTextOnMobile
-    ? 'max-md:w-14 max-md:h-11'
-    : logoSizeClassesMap[size]
+  const colorMap = { white: 'text-white', black: 'text-black' }
+  const hideTextSize = hideTextOnMobile ? 'max-md:w-14 max-md:h-11' : ''
 
   return (
-    <div className={`${colorClasses} ${sizeClasses} logo`}>
+    <div
+      className={`${colorMap[color]} ${logoSizeClassesMap[size]} ${hideTextSize} logo`}
+    >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
