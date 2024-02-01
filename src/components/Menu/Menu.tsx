@@ -8,6 +8,7 @@ import {
   IconShoppingCart,
   IconX
 } from '@tabler/icons-react'
+import Link from 'next/link'
 import { useState } from 'react'
 import { twMerge } from 'tailwind-merge'
 
@@ -75,7 +76,12 @@ export const Menu = ({ username }: MenuProps) => {
 
         {!username && (
           <div>
-            <Button className="hidden min-md:block">Sign in</Button>
+            <Button
+              as={{ type: 'link', props: { href: '/auth/sign-in' } }}
+              className="hidden min-md:block"
+            >
+              Sign in
+            </Button>
           </div>
         )}
       </div>
@@ -121,17 +127,20 @@ export const Menu = ({ username }: MenuProps) => {
           <div
             className={`flex flex-col items-center px-xl pb-xl ${transitionUp}`}
           >
-            <Button fullWidth size="lg">
-              Log in now
+            <Button
+              as={{ type: 'link', props: { href: '/auth/sign-in' } }}
+              fullWidth
+              size="lg"
+            >
+              Sign in
             </Button>
             <span className="block my-xxs text-xs">or</span>
-            <a
+            <Link
               className="text-primary border-b-2 border-primary"
-              href="#"
-              title="Sign Up"
+              href="/auth/sign-up"
             >
               Sign Up
-            </a>
+            </Link>
           </div>
         )}
       </nav>

@@ -1,11 +1,18 @@
 import { Button } from '@/components/Button/Button'
 import { TextField } from '@/components/TextField/TextField'
-import { IconLock, IconMail } from '@tabler/icons-react'
+import { IconBrandGravatar, IconLock, IconMail } from '@tabler/icons-react'
 import Link from 'next/link'
 
-export const FormSignIn = () => (
+export const FormSignUp = () => (
   <div>
     <form>
+      <TextField
+        name="name"
+        placeholder="Name"
+        type="name"
+        icon={<IconBrandGravatar />}
+        className="my-xxs"
+      />
       <TextField
         name="email"
         placeholder="Email"
@@ -20,26 +27,27 @@ export const FormSignIn = () => (
         icon={<IconLock />}
         className="my-xxs"
       />
-      <a
-        href="#"
-        className="block text-sm text-black text-right hover:text-gray-dark"
-      >
-        Forgot your password?
-      </a>
+      <TextField
+        name="confirm-password"
+        placeholder="Confirm password"
+        type="password"
+        icon={<IconLock />}
+        className="my-xxs"
+      />
 
-      <Button className="mt-md mx-auto mb-xs" size="lg" fullWidth>
-        Sign in now
+      <Button size="lg" fullWidth className="mt-md mx-auto mb-xs">
+        Sign up now
       </Button>
 
       <div className="text-sm text-black text-center">
-        Don't have an account?{' '}
+        Already have an account?{' '}
         <Link
-          className="text-secondary border-b-[1px] border-solid border-secondary
+          href="/auth/sign-in"
+          className="text-secondary border-[1px] border-solid border-secondary
           transition-[color,border,0.1s_ease-in-out] hover:text-secondary-dark
           hover:border-b-[1px] hover:border-solid hover:border-secondary-dark"
-          href="/auth/sign-up"
         >
-          Create one
+          Sign in
         </Link>
       </div>
     </form>
