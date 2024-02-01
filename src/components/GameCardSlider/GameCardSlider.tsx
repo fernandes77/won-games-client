@@ -3,6 +3,7 @@
 import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
 import { Slider, SliderArrow, SliderSettings } from '@/components/Slider/Slider'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
+import { twMerge } from 'tailwind-merge'
 import './GameCardSlider.css'
 
 const settings: SliderSettings = {
@@ -55,13 +56,15 @@ const settings: SliderSettings = {
 export type GameCardSliderProps = {
   items: GameCardProps[]
   color?: 'white' | 'black'
+  className?: string
 }
 
 export const GameCardSlider = ({
   items,
-  color = 'white'
+  color = 'white',
+  className
 }: GameCardSliderProps) => (
-  <section color={color} className="game-card-slider">
+  <section color={color} className={twMerge('game-card-slider', className)}>
     <Slider settings={settings}>
       {items.map((item, index) => (
         <GameCard key={index} {...item} />

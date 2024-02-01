@@ -1,6 +1,7 @@
 import { Button } from '@/components/Button/Button'
+import { twMerge } from 'tailwind-merge'
 
-type HighlightProps = {
+export type HighlightProps = {
   title: string
   subtitle: string
   backgroundImage: string
@@ -8,6 +9,7 @@ type HighlightProps = {
   alignment?: 'right' | 'left'
   buttonLabel: string
   buttonLink: string
+  className?: string
 }
 
 export const Highlight = ({
@@ -17,6 +19,7 @@ export const Highlight = ({
   floatImage,
   alignment = 'right',
   buttonLabel,
+  className,
   buttonLink
 }: HighlightProps) => {
   const alignmentMap = {
@@ -29,9 +32,12 @@ export const Highlight = ({
   return (
     <div
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      className={`highlight relative grid ${alignmentMap[alignment]} h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] min-md:h-80
-    after:absolute after:w-full after:h-full after:bg-[rgba(0, 0, 0, 0.6)]
-    `}
+      className={twMerge(
+        `highlight relative grid ${alignmentMap[alignment]} h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] min-md:h-80
+        after:absolute after:w-full after:h-full after:bg-[rgba(0, 0, 0, 0.6)]
+        `,
+        className
+      )}
     >
       {!!floatImage && (
         <img

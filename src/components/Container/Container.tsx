@@ -1,5 +1,16 @@
 import { Children } from '@/types/children'
+import { twMerge } from 'tailwind-merge'
 
-export const Container = ({ children }: Children) => (
-  <div className="max-w-container mx-auto px-half-gutter">{children}</div>
-)
+export const Container = ({
+  children,
+  className,
+  as = 'div'
+}: Children & { as?: 'div' | 'section'; className?: string }) => {
+  const props = {
+    className: twMerge('max-w-container mx-auto px-half-gutter', className)
+  }
+
+  if (as === 'section') return <section {...props}>{children}</section>
+
+  return <div {...props}>{children}</div>
+}
