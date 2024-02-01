@@ -10,7 +10,8 @@
     "test": "bun run jest",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "gen": "bun plop --plopfile generators/plopfile.js"
+    "gen": "bun plop --plopfile generators/plopfile.js",
+    "typecheck": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "@tabler/icons-react": "^2.44.0",
