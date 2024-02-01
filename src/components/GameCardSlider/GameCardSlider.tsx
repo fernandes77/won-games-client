@@ -1,7 +1,7 @@
 'use client'
 
 import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
-import { Slider, SliderSettings } from '@/components/Slider/Slider'
+import { Slider, SliderArrow, SliderSettings } from '@/components/Slider/Slider'
 import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
 import './GameCardSlider.css'
 
@@ -40,8 +40,16 @@ const settings: SliderSettings = {
       }
     }
   ],
-  nextArrow: <IconArrowRight aria-label="next games" />,
-  prevArrow: <IconArrowLeft aria-label="previous games" />
+  nextArrow: (
+    <SliderArrow>
+      <IconArrowRight aria-label="next games" />
+    </SliderArrow>
+  ),
+  prevArrow: (
+    <SliderArrow>
+      <IconArrowLeft aria-label="previous games" />
+    </SliderArrow>
+  )
 }
 
 export type GameCardSliderProps = {

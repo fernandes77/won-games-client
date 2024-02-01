@@ -16,7 +16,7 @@
         margin: 0 0.3rem;
         cursor: pointer;
 
-        &.slick-active {
+        .slick-active {
             background: #F231A5;
         }
     }
