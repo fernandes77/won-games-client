@@ -3,7 +3,7 @@
 exports[`<Footer /> should render 4 column topics 1`] = `
 <footer>
   <div
-    class="text-black w-28 h-8 logo"
+    class="text-black w-28 h-8  logo"
   >
     <svg
       aria-label="Won Games"
