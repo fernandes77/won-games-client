@@ -1,16 +1,17 @@
 import { BannerSlider } from '@/components/BannerSlider/BannerSlider'
 import banners from '@/components/BannerSlider/BannerSlider.mock'
 import { Container } from '@/components/Container/Container'
-import { Footer } from '@/components/Footer/Footer'
 import games from '@/components/GameCardSlider/GameCardSlider.mock'
 import highlight from '@/components/Highlight/Highlight.mock'
-import { Menu } from '@/components/Menu/Menu'
 import { Showcase } from '@/components/Showcase/Showcase'
+import { StoreBase } from '@/components/StoreBase/StoreBase'
 
 const BannerSection = () => (
-  <section className="my-lg -mx-half-gutter min-md:my-lg min-md:mx-0 relative z-base">
-    <BannerSlider items={banners} />
-  </section>
+  <Container>
+    <section className="my-lg -mx-half-gutter min-md:my-lg min-md:mx-0 relative z-base">
+      <BannerSlider items={banners} />
+    </section>
+  </Container>
 )
 
 const NewsSection = () => (
@@ -37,25 +38,10 @@ const FreeGamesSection = () => (
   <Showcase title="Free games" highlight={highlight} games={games} />
 )
 
-const FooterSection = () => (
-  <section
-    className="mt-lg pb-xs pt-xxl bg-white [clip-path:polygon(0_5%,100%_0%,100%_100%,0_100%)]
-    min-md:pt-[7rem] min-md:[clip-path:polygon(0_15%,100%_0%,100%_100%,0_100%)]"
-  >
-    <Container>
-      <Footer />
-    </Container>
-  </section>
-)
-
 export default function Home() {
   return (
-    <section>
-      <Container>
-        <Menu />
-
-        <BannerSection />
-      </Container>
+    <StoreBase>
+      <BannerSection />
 
       <NewsSection />
 
@@ -64,8 +50,6 @@ export default function Home() {
       <UpcomingSection />
 
       <FreeGamesSection />
-
-      <FooterSection />
-    </section>
+    </StoreBase>
   )
 }
