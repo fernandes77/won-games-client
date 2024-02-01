@@ -5,6 +5,7 @@ import { twMerge } from 'tailwind-merge'
 type ButtonProps = {
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
+  minimal?: boolean
   icon?: JSX.Element
   className?: string
   as?:
@@ -28,19 +29,25 @@ export const Button = ({
   children,
   size = 'md',
   fullWidth = false,
+  minimal = false,
   icon,
   as = { type: 'button' },
   className
 }: ButtonProps) => {
   const hasIcon = !!icon
   const withIconClasses = 'inline-flex items-center justify-center'
+  const minimalClasses = 'bg-none text-primary hover:text-primary-dark'
 
   const classes = `${buttonSizesMap[size]}
-  ${fullWidth ? 'w-full' : ''}
-  ${hasIcon ? withIconClasses : ''}
-  inline-flex items-center justify-center cursor-pointer
-  bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4
-  hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]
+    ${fullWidth ? 'w-full' : ''}
+    ${hasIcon ? withIconClasses : ''}
+    ${
+      minimal
+        ? minimalClasses
+        : 'hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]'
+    }
+    inline-flex items-center justify-center cursor-pointer
+    bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4
   `
 
   if (as?.type === 'link')
