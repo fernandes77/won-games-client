@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<TextField /> Renders with error 1`] = `
+<div>
+  <label
+    class="
+          text-red
+          text-sm text-black cursor-pointer
+          "
+    for="TextField"
+  >
+    TextField
+  </label>
+  <div
+    class="border-red
+        flex bg-gray-light rounded-sm px-xs border-2 border-solid border-gray-light
+        focus-within:shadow-[0_0_0.5rem] focus-within:shadow-primary"
+  >
+    <div
+      class="order-none
+            
+            text-red
+            flex items-center w-[1.375rem] text-gray [&>svg]:w-full"
+    >
+      <svg
+        class="tabler-icon tabler-icon-mail"
+        data-testid="icon"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M3 7a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-10z"
+        />
+        <path
+          d="M3 7l9 6l9 -6"
+        />
+      </svg>
+    </div>
+    <input
+      class="pl-xs
+          
+           text-black font-poppins text-base py-xxs bg-transparent border-0 outline-none w-full"
+      type="text"
+      value=""
+    />
+  </div>
+  <p
+    class="text-red text-xs"
+  >
+    Error message
+  </p>
+</div>
+`;

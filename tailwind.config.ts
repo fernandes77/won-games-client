@@ -62,7 +62,8 @@ const config: Config = {
         },
         blue: {
           dark: '#06092B'
-        }
+        },
+        red: '#FF6347'
       },
 
       screens: {
