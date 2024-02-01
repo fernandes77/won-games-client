@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Checkbox /> should render with label 1`] = `
+<div
+  class="flex items-center"
+>
+  <input
+    class="cursor-pointer flex items-center justify-center appearance-none w-[1.125rem] h-[1.125rem] border-2 border-solid border-gray-dark rounded-sm relative outline-none transition-[background_border_0.1s_ease-in-out] before:w-1.5 before:h-[0.5625rem] before:border-white before:border-t-0 before:border-l-0 before:transform-[rotate(45deg)] before:absolute before:top-[1px] before:opacity-0 before:transition-[0.1s_ease-in-out] focus:shadow-primary focus:shadow-[0_0_0.5rem] checked:border-primary checked:bg-primary checked:before:opacity-100"
+    id="check"
+    type="checkbox"
+    value=""
+  />
+  <label
+    class="text-white cursor-pointer pl-xxs leading-[1.125rem]"
+    for="check"
+  >
+    checkbox label
+  </label>
+</div>
+`;
