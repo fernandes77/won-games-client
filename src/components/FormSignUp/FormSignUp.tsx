@@ -1,6 +1,6 @@
 import { Button } from '@/components/Button/Button'
 import { TextField } from '@/components/TextField/TextField'
-import { IconBrandGravatar, IconLock, IconMail } from '@tabler/icons-react'
+import { IconLock, IconMail, IconUserCircle } from '@tabler/icons-react'
 import Link from 'next/link'
 
 export const FormSignUp = () => (
@@ -10,7 +10,7 @@ export const FormSignUp = () => (
         name="name"
         placeholder="Name"
         type="name"
-        icon={<IconBrandGravatar />}
+        icon={<IconUserCircle />}
         className="my-xxs"
       />
       <TextField
