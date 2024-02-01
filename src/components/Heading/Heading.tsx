@@ -8,7 +8,7 @@ type HeadingProps = {
   lineLeft?: boolean
   lineBottom?: boolean
   lineColor?: LineColors
-  size?: 'sm' | 'md'
+  size?: 'sm' | 'md' | 'hg'
   className?: string
 } & Children
 
@@ -33,11 +33,12 @@ export const Heading = ({
 }: HeadingProps) => {
   const headingSizeClassesMap = {
     sm: 'text-md',
-    md: 'text-xl min-md:text-xxl'
+    md: 'text-xl min-md:text-xxl',
+    hg: 'text-hg'
   }
   const headingLineLeftClasses = `pl-2 border-l-[7px] ${lineColorMap[lineColor]}`
   const lineLeftStyle = lineLeft ? headingLineLeftClasses : ''
-  const lineBottomSizeClassesMap = { sm: 'w-7', md: 'w-14' }
+  const lineBottomSizeClassesMap = { sm: 'w-7', md: 'w-14', hg: 'w-14' }
 
   return (
     <div className={twMerge('relative', className)}>

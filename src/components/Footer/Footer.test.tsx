@@ -1,6 +1,5 @@
 import { Footer } from '@/components/Footer/Footer'
-import { render } from '@/utils/tests/helpers'
-import { screen } from '@testing-library/react'
+import { render, screen } from '@/utils/tests/helpers'
 
 describe('<Footer />', () => {
   it('should render 4 column topics', () => {

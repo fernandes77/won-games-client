@@ -20,11 +20,11 @@ export default function AuthLayout({ children }: Children) {
         />
         <div className="text-white grid grid-cols-1 justify-between h-full relative z-base">
           <Link href="/" className="w-fit h-fit">
-            <Logo />
+            <Logo id="banner" />
           </Link>
 
           <div>
-            <Heading>All your favorite games in one place</Heading>
+            <Heading size="hg">All your favorite games in one place</Heading>
             <h3 className="text-xxl font-light mt-xxs">
               <strong className="text-primary">WON</strong> is the best and most
               complete gaming platform.
@@ -40,7 +40,7 @@ export default function AuthLayout({ children }: Children) {
       <div className="bg-white grid items-center justify-center">
         <div className="w-[18.75rem] min-md:w-[22.5rem] [&_.logo]:mx-auto [&_.logo]:mb-xxl">
           <Link href="/">
-            <Logo color="black" size="large" />
+            <Logo id="content" color="black" size="large" />
           </Link>
 
           {children}

@@ -1,3 +1,5 @@
+'use client'
+
 import { useState } from 'react'
 
 export type TextFieldProps = {
@@ -9,6 +11,7 @@ export type TextFieldProps = {
   iconPosition?: 'left' | 'right'
   disabled?: boolean
   error?: string
+  className?: string
 } & React.InputHTMLAttributes<HTMLInputElement>
 
 export const TextField = ({
@@ -20,6 +23,7 @@ export const TextField = ({
   error,
   disabled = false,
   onInput,
+  className,
   ...props
 }: TextFieldProps) => {
   const [value, setValue] = useState(initialValue)
@@ -37,7 +41,7 @@ export const TextField = ({
   const cssDisabled = 'cursor-not-allowed text-gray placeholder:text-current'
 
   return (
-    <div>
+    <div className={className}>
       {!!label && (
         <label
           htmlFor={labelFor}
