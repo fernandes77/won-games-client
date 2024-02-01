@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Radio /> should render with label (white) 1`] = `
+<div
+  class="flex items-center"
+>
+  <input
+    class="flex items-center justify-center appearance-none w-[1.125rem] h-[1.125rem] border-2 border-solid border-primary rounded-full bg-transparent outline-none transition-[background_0.1s_ease-in-out] cursor-pointer focus:shadow-[0_0_0.5rem] focus:shadow-primary before:w-2 before:h-2 before:rounded-full before:bg-primary before:transition-[opacity_0.1s_ease-in-out] before:opacity-0 before:absolute checked:before:opacity-100"
+    id="check"
+    type="radio"
+    value="anyValue"
+  />
+  <label
+    class="text-white pl-xxs leading-none cursor-pointer"
+    for="check"
+  >
+    Radio
+  </label>
+</div>
+`;
