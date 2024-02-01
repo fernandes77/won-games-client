@@ -42,7 +42,7 @@ export const FormSignUp = () => (
       <div className="text-sm text-black text-center">
         Already have an account?{' '}
         <Link
-          href="/auth/sign-in"
+          href="/sign-in"
           className="text-secondary border-[1px] border-solid border-secondary
           transition-[color,border,0.1s_ease-in-out] hover:text-secondary-dark
           hover:border-b-[1px] hover:border-solid hover:border-secondary-dark"

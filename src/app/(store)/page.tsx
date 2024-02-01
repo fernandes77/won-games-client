@@ -4,7 +4,6 @@ import { Container } from '@/components/Container/Container'
 import games from '@/components/GameCardSlider/GameCardSlider.mock'
 import highlight from '@/components/Highlight/Highlight.mock'
 import { Showcase } from '@/components/Showcase/Showcase'
-import { StoreBase } from '@/components/StoreBase/StoreBase'
 
 const BannerSection = () => (
   <Container>
@@ -40,7 +39,7 @@ const FreeGamesSection = () => (
 
 export default function Home() {
   return (
-    <StoreBase>
+    <>
       <BannerSection />
 
       <NewsSection />
@@ -50,6 +49,6 @@ export default function Home() {
       <UpcomingSection />
 
       <FreeGamesSection />
-    </StoreBase>
+    </>
   )
 }

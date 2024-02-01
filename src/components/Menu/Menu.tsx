@@ -77,7 +77,7 @@ export const Menu = ({ username }: MenuProps) => {
         {!username && (
           <div>
             <Button
-              as={{ type: 'link', props: { href: '/auth/sign-in' } }}
+              as={{ type: 'link', props: { href: '/sign-in' } }}
               className="hidden min-md:block"
             >
               Sign in
@@ -128,7 +128,7 @@ export const Menu = ({ username }: MenuProps) => {
             className={`flex flex-col items-center px-xl pb-xl ${transitionUp}`}
           >
             <Button
-              as={{ type: 'link', props: { href: '/auth/sign-in' } }}
+              as={{ type: 'link', props: { href: '/sign-in' } }}
               fullWidth
               size="lg"
             >
@@ -137,7 +137,7 @@ export const Menu = ({ username }: MenuProps) => {
             <span className="block my-xxs text-xs">or</span>
             <Link
               className="text-primary border-b-2 border-primary"
-              href="/auth/sign-up"
+              href="/sign-up"
             >
               Sign Up
             </Link>
