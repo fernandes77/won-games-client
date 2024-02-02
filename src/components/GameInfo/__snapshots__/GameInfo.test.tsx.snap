@@ -32,7 +32,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
     class="flex flex-col items-center min-md:flex-row-reverse"
   >
     <button
-      class="cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] w-full mb-xxs min-md:w-auto min-md:mb-0"
+      class="cursor-pointer text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] w-full mb-xxs min-md:w-auto min-md:mb-0"
     >
       <svg
         class="tabler-icon tabler-icon-shopping-cart-plus"
@@ -69,7 +69,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
       </span>
     </button>
     <button
-      class="cursor-pointer from-[#ff5f5f] via-[#f062c0] to-[#f062c0] rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center bg-none text-primary hover:text-primary-dark w-full mb-xxs min-md:w-auto min-md:mb-0"
+      class="cursor-pointer rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center bg-none text-primary hover:text-primary-dark w-full mb-xxs min-md:w-auto min-md:mb-0"
     >
       <svg
         class="tabler-icon tabler-icon-heart"
