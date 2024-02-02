@@ -11,10 +11,7 @@ type Story = StoryObj<typeof Radio>
 
 export const Primary: Story = {
   parameters: {
-    layout: 'fullscreen',
-    backgrounds: {
-      default: 'won-dark'
-    }
+    layout: 'fullscreen'
   },
   decorators: [
     () => (

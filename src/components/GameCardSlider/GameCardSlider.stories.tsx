@@ -3,6 +3,7 @@ import { GameCardSlider } from './GameCardSlider'
 import items from './GameCardSlider.mock'
 
 const meta: Meta<typeof GameCardSlider> = {
+  title: 'Game/Card Slider',
   component: GameCardSlider
 }
 

@@ -11,10 +11,7 @@ type Story = StoryObj<typeof Checkbox>
 
 export const Primary: Story = {
   parameters: {
-    layout: 'fullscreen',
-    backgrounds: {
-      default: 'won-dark'
-    }
+    layout: 'fullscreen'
   },
   decorators: [
     () => (

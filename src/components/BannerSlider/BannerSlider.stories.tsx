@@ -11,7 +11,6 @@ type Story = StoryObj<typeof BannerSlider>
 
 export const Primary: Story = {
   args: { items },
-  parameters: { backgrounds: { default: 'won-dark' } },
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '130rem', margin: '0 auto' }}>

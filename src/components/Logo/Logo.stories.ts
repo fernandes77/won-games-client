@@ -9,6 +9,4 @@ const meta: Meta<typeof Logo> = {
 export default meta
 type Story = StoryObj<typeof Logo>
 
-export const Primary: Story = {
-  parameters: { backgrounds: { default: 'won-dark' } }
-}
+export const Primary: Story = {}

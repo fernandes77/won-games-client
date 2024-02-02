@@ -9,6 +9,7 @@ export default meta
 type Story = StoryObj<typeof Footer>
 
 export const Primary: Story = {
+  parameters: { backgrounds: { default: 'won-light' } },
   decorators: [
     (Story) => (
       <div style={{ maxWidth: '65rem', margin: '0 auto' }}>

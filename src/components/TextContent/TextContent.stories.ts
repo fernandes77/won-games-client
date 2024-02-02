@@ -10,10 +10,5 @@ export default meta
 type Story = StoryObj<typeof TextContent>
 
 export const Primary: Story = {
-  args: textMock,
-  parameters: {
-    backgrounds: {
-      default: 'won-dark'
-    }
-  }
+  args: textMock
 }

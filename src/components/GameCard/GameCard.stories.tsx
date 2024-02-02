@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { GameCard } from './GameCard'
 
 const meta: Meta<typeof GameCard> = {
+  title: 'Game/Card',
   component: GameCard
 }
 
@@ -24,7 +25,6 @@ const commonArgTypes = {
 export const Primary: Story = {
   args: commonArgs,
   argTypes: commonArgTypes,
-  parameters: { backgrounds: { default: 'won-dark' } },
   decorators: [
     (Story) => (
       <div style={{ width: '30rem' }}>
@@ -42,7 +42,6 @@ export const WithRibbon: Story = {
     ribbonColor: 'primary'
   },
   argTypes: commonArgTypes,
-  parameters: { backgrounds: { default: 'won-dark' } },
   decorators: [
     (Story) => (
       <div style={{ width: '30rem' }}>
