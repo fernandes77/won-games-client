@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GameInfo /> should render game informations 1`] = `
+<div
+  class="relative bg-white p-sm"
+>
+  <div
+    class="relative"
+  >
+    <h2
+      class=" text-xl min-md:text-xxl text-black font-bold mb-md"
+    >
+      My Game Title
+    </h2>
+    <div
+      class="absolute left-0 bottom-[-5px] border-b-[5px]
+          border-primary w-14"
+      data-testid="heading-line-bottom"
+    />
+  </div>
+  <div
+    class="text-sm h-9 px-sm before:top-9 before:border-t-[10px] bg-secondary before:border-t-secondary-dark before:border-l-secondary-dark absolute top-xs flex items-center font-bold text-white before:absolute before:right-0 before:border-solid before:border-l-0 before:border-r-transparent before:border-b-transparent before:border-b-[0.625rem] right-[-0.625rem] before:border-r-[0.625rem] min-md:right-sm min-md:top-sm min-md:text-lg min-md:before:border-none"
+  >
+    $210,00
+  </div>
+  <p
+    class="text-sm text-gray mb-sm min-md:max-w-[48rem]"
+  >
+    Game Description
+  </p>
+  <div
+    class="flex flex-col items-center min-md:flex-row-reverse"
+  >
+    <button
+      class="cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] w-full mb-xxs min-md:w-auto min-md:mb-0"
+    >
+      <svg
+        class="tabler-icon tabler-icon-shopping-cart-plus"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M4 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"
+        />
+        <path
+          d="M12.5 17h-6.5v-14h-2"
+        />
+        <path
+          d="M6 5l14 1l-.86 6.017m-2.64 .983h-10.5"
+        />
+        <path
+          d="M16 19h6"
+        />
+        <path
+          d="M19 16v6"
+        />
+      </svg>
+      <span
+        class="ml-xxs"
+      >
+        Add to cart
+      </span>
+    </button>
+    <button
+      class="cursor-pointer from-[#ff5f5f] via-[#f062c0] to-[#f062c0] rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs inline-flex items-center justify-center bg-none text-primary hover:text-primary-dark w-full mb-xxs min-md:w-auto min-md:mb-0"
+    >
+      <svg
+        class="tabler-icon tabler-icon-heart"
+        fill="none"
+        height="24"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        width="24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572"
+        />
+      </svg>
+      <span
+        class="ml-xxs"
+      >
+        Wishlist
+      </span>
+    </button>
+  </div>
+</div>
+`;

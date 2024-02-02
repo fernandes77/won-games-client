@@ -105,7 +105,7 @@ exports[`<FormSignIn /> should render the form 1`] = `
           Forgot your password?
         </a>
         <button
-          class="h-[3.125rem] text-md px-xl py-xxs w-full hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 mt-md mx-auto mb-xs"
+          class="inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs w-full hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] mt-md mx-auto mb-xs"
         >
           <span
             class=""

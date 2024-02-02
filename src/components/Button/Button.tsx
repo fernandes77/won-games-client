@@ -38,16 +38,16 @@ export const Button = ({
   const withIconClasses = 'inline-flex items-center justify-center'
   const minimalClasses = 'bg-none text-primary hover:text-primary-dark'
 
-  const classes = `${buttonSizesMap[size]}
+  const classes = `inline-flex items-center justify-center cursor-pointer
+    text-white rounded p-xxs [&>svg]:w-4
+    ${buttonSizesMap[size]}
     ${fullWidth ? 'w-full' : ''}
     ${hasIcon ? withIconClasses : ''}
     ${
       minimal
         ? minimalClasses
-        : 'hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]'
+        : 'bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]'
     }
-    inline-flex items-center justify-center cursor-pointer
-    bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4
   `
 
   if (as?.type === 'link')

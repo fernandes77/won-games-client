@@ -32,7 +32,7 @@ exports[`<Banner /> should render correctly 1`] = `
       </p>
     </h3>
     <a
-      class="h-[3.125rem] text-md px-xl py-xxs hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4"
+      class="inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]"
       href="/games/defy-death"
     >
       <span

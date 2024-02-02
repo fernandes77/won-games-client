@@ -18,7 +18,7 @@ exports[`<FormSignUp /> should render the form 1`] = `
             flex items-center w-[1.375rem] text-gray [&>svg]:w-full"
         >
           <svg
-            class="tabler-icon tabler-icon-brand-gravatar"
+            class="tabler-icon tabler-icon-user-circle"
             fill="none"
             height="24"
             stroke="currentColor"
@@ -30,7 +30,13 @@ exports[`<FormSignUp /> should render the form 1`] = `
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
-              d="M5.64 5.632a9 9 0 1 0 6.36 -2.632v7.714"
+              d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"
+            />
+            <path
+              d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"
+            />
+            <path
+              d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4a4 4 0 0 1 3.834 2.855"
             />
           </svg>
         </div>
@@ -187,7 +193,7 @@ exports[`<FormSignUp /> should render the form 1`] = `
       </div>
     </div>
     <button
-      class="h-[3.125rem] text-md px-xl py-xxs w-full hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 mt-md mx-auto mb-xs"
+      class="inline-flex items-center justify-center cursor-pointer bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] text-white rounded p-xxs [&>svg]:w-4 h-[3.125rem] text-md px-xl py-xxs w-full hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6] mt-md mx-auto mb-xs"
     >
       <span
         class=""
