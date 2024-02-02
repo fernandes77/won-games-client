@@ -1,6 +1,7 @@
 'use client'
 
 import { Children } from '@/types/children'
+import { forwardRef } from 'react'
 import SlickSlider, { CustomArrowProps, Settings } from 'react-slick'
 import './Slider.css'
 
@@ -19,8 +20,15 @@ export const SliderArrow = ({
   ...props
 }: CustomArrowProps & Children) => <div {...props}>{children}</div>
 
-export const Slider = ({ children, settings }: SliderProps) => (
+const _Slider: React.ForwardRefRenderFunction<SlickSlider, SliderProps> = (
+  { children, settings },
+  ref
+) => (
   <section>
-    <SlickSlider {...settings}>{children}</SlickSlider>
+    <SlickSlider ref={ref} {...settings}>
+      {children}
+    </SlickSlider>
   </section>
 )
+
+export const Slider = forwardRef(_Slider)

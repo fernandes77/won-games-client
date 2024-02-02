@@ -1,0 +1,40 @@
+.slick-prev,
+.slick-next {
+    display: block;
+    color: '#FAFAFA';
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    transform: translate(0, -50%);
+}
+
+.slick-prev {
+    left: -3.5rem;
+}
+
+.slick-next {
+    right: -3.5rem;
+}
+
+.slick-prev.slick-disabled,
+.slick-next.slick-disabled {
+    visibility: hidden;
+}
+
+.slick-slide>div {
+    margin: 0 1rem;
+    cursor: pointer;
+}
+
+.slick-list {
+    margin: 0 -1rem;
+}
+
+.gallery {
+    @media (min-width: 1440px) {
+        overflow-x: hidden;
+    }
+}
