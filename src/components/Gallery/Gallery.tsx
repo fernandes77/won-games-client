@@ -5,7 +5,7 @@ import {
   CarouselApi,
   CarouselContent,
   CarouselItem
-} from '@/components/ui/carousel'
+} from '@/components/Carousel/Carousel'
 import { IconX } from '@tabler/icons-react'
 import { useEffect, useState } from 'react'
 

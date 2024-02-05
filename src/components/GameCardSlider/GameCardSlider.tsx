@@ -1,11 +1,11 @@
 'use client'
 
-import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
 import {
   Carousel,
   CarouselContent,
   CarouselItem
-} from '@/components/ui/carousel'
+} from '@/components/Carousel/Carousel'
+import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
 import { ClassName } from '@/types/class-name'
 
 export type GameCardSliderProps = {

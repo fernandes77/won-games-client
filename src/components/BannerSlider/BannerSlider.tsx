@@ -7,7 +7,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious
-} from '@/components/ui/carousel'
+} from '@/components/Carousel/Carousel'
 
 type BannerSliderProps = {
   items: BannerProps[]
@@ -18,12 +18,8 @@ export const BannerSlider = ({ items }: BannerSliderProps) => (
     <Carousel>
       <CarouselContent>
         {items.map((item) => (
-          <CarouselItem className="basis-full">
-            <Banner
-              className="max-w-[65rem] mx-auto"
-              key={item.title}
-              {...item}
-            />
+          <CarouselItem className="basis-full" key={item.title}>
+            <Banner className="max-w-[65rem] mx-auto" {...item} />
           </CarouselItem>
         ))}
       </CarouselContent>

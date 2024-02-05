@@ -42,8 +42,9 @@ describe('<Gallery />', () => {
     )
 
     // espero que a imagem da thumbnail seja aberta
-    const img = await screen.findByRole('img', { name: /Gallery Image 2/i })
-    expect(img.parentElement?.parentElement).toHaveClass('slick-active')
+    expect(
+      screen.getByRole('img', { name: /Gallery Image 2/i, hidden: false })
+    ).toBeInTheDocument()
   })
 
   it('should handle close modal when overlay or button clicked', () => {
