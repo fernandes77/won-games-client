@@ -7,7 +7,10 @@ export const Container = ({
   as = 'div'
 }: Children & { as?: 'div' | 'section'; className?: string }) => {
   const props = {
-    className: twMerge('max-w-container mx-auto px-half-gutter', className)
+    className: twMerge(
+      'w-full max-w-container mx-auto px-half-gutter',
+      className
+    )
   }
 
   if (as === 'section') return <section {...props}>{children}</section>

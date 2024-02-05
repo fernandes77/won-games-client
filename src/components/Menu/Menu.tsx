@@ -51,7 +51,7 @@ export const Menu = ({ username }: MenuProps) => {
   const menuLinkMobileClasses = `text-black font-bold text-xl mb-sm ${transitionUp}`
 
   return (
-    <menu className="flex items-center py-sm px-0 relative">
+    <menu className="flex items-center py-sm px-0 relative z-menu">
       <IconWrapper className="min-md:hidden" onClick={() => setIsOpen(true)}>
         <IconMenu2 aria-label="Open Menu" />
       </IconWrapper>

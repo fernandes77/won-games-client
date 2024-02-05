@@ -11,7 +11,7 @@ describe("<Container />", () => {
 
     expect(container.firstChild).toMatchInlineSnapshot(`
       <div
-        class="max-w-container mx-auto px-half-gutter"
+        class="w-full max-w-container mx-auto px-half-gutter"
       >
         <span>
           Won Games
