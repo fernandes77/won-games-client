@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CartList /> should render the cart list 1`] = `
+<main
+  class="bg-white flex flex-col self-start"
+>
+  <div
+    class="p-sm border-b-[1px] border-gray-light min-md:flex"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="shrink-0 mr-3 w-24 h-14 min-md:mr-xs min-md:w-[9.4rem] min-md:h-[4.4rem]"
+      >
+        <img
+          alt="Red Dead Redemption 2"
+          class="w-full h-full object-cover"
+          src="https://source.unsplash.com/user/willianjusten/151x70"
+        />
+      </div>
+      <div
+        class="flex flex-col items-start"
+      >
+        <h3
+          class="flex items-center text-sm text-black mb-xxs min-md:text-xl"
+        >
+          Red Dead Redemption 2
+        </h3>
+        <div
+          class="text-white py-[2px] px-xxs bg-secondary rounded text-sm font-bold"
+        >
+          R$ 215,00
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="p-sm border-b-[1px] border-gray-light min-md:flex"
+  >
+    <div
+      class="flex"
+    >
+      <div
+        class="shrink-0 mr-3 w-24 h-14 min-md:mr-xs min-md:w-[9.4rem] min-md:h-[4.4rem]"
+      >
+        <img
+          alt="Borderlands 3"
+          class="w-full h-full object-cover"
+          src="https://source.unsplash.com/user/willianjusten/151x70"
+        />
+      </div>
+      <div
+        class="flex flex-col items-start"
+      >
+        <h3
+          class="flex items-center text-sm text-black mb-xxs min-md:text-xl"
+        >
+          Borderlands 3
+        </h3>
+        <div
+          class="text-white py-[2px] px-xxs bg-secondary rounded text-sm font-bold"
+        >
+          R$ 215,00
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="bg-gray-lighter text-black font-bold text-sm p-5 flex justify-between min-md:text-md min-md:p-sm"
+  >
+    Total 
+    <span
+      class="text-primary"
+    >
+      R$ 430,00
+    </span>
+  </div>
+</main>
+`;

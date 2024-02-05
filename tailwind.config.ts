@@ -1,5 +1,5 @@
 import tailwindCssGridAreas from '@savvywombat/tailwindcss-grid-areas'
-import { darken } from 'polished'
+import { darken, tint } from 'polished'
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
@@ -57,6 +57,7 @@ const config: Config = {
         light: '#F2F2F2',
         black: '#030517',
         gray: {
+          lighter: tint(0.2, '#EAEAEA'),
           light: '#EAEAEA',
           DEFAULT: '#8F8F8F',
           dark: '#2E2F42'
