@@ -61,7 +61,7 @@ export default function Game() {
         style={{ backgroundImage: `url(${props.cover})` }}
         role="image"
         aria-label="cover"
-        className="absolute top-0 right-0 left-0 h-10 bg-cover bg-[top_center] opacity-40
+        className="absolute top-0 right-0 left-0 h-[24.7rem] bg-cover bg-[top_center] opacity-40
         min-md:h-[43.75rem] min-md:[clip-path:polygon(0_0,100%_0,100%_100%,0_85%)]"
       />
 
