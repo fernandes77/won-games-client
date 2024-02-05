@@ -18,5 +18,13 @@ export const Primary: Story = {
       </div>
     )
   ],
-  args: { icon: <IconMail /> }
+  args: {
+    icon: <IconMail />,
+    label: 'E-mail',
+    name: 'email',
+    id: 'Email',
+    initialValue: '',
+    placeholder: 'john.cage@gmail.com',
+    disabled: false
+  }
 }

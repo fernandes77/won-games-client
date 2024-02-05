@@ -5,7 +5,6 @@ import { useState } from 'react'
 export type TextFieldProps = {
   onInput?: (value: string) => void
   label?: string
-  labelFor?: string
   initialValue?: string
   icon?: React.ReactNode
   iconPosition?: 'left' | 'right'
@@ -17,7 +16,7 @@ export const TextField = ({
   icon,
   iconPosition = 'left',
   label,
-  labelFor = '',
+  name,
   initialValue = '',
   error,
   disabled = false,
@@ -43,7 +42,7 @@ export const TextField = ({
     <div className={className}>
       {!!label && (
         <label
-          htmlFor={labelFor}
+          htmlFor={name}
           className={`${disabled ? cssDisabled : ''}
           ${error ? 'text-red' : ''}
           text-sm text-black cursor-pointer
@@ -75,6 +74,8 @@ export const TextField = ({
           onChange={onChange}
           value={value}
           disabled={disabled}
+          name={name}
+          {...(label ? { id: name } : {})}
           {...props}
         />
       </div>

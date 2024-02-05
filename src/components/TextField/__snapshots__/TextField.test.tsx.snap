@@ -7,7 +7,6 @@ exports[`<TextField /> Renders with error 1`] = `
           text-red
           text-sm text-black cursor-pointer
           "
-    for="TextField"
   >
     TextField
   </label>
