@@ -11,7 +11,6 @@ export type TextFieldProps = {
   iconPosition?: 'left' | 'right'
   disabled?: boolean
   error?: string
-  className?: string
 } & React.InputHTMLAttributes<HTMLInputElement>
 
 export const TextField = ({

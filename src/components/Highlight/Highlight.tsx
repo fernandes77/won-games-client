@@ -1,5 +1,6 @@
 import { Button } from '@/components/Button/Button'
-import { twMerge } from 'tailwind-merge'
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 
 export type HighlightProps = {
   title: string
@@ -9,8 +10,7 @@ export type HighlightProps = {
   alignment?: 'right' | 'left'
   buttonLabel: string
   buttonLink: string
-  className?: string
-}
+} & ClassName
 
 export const Highlight = ({
   title,
@@ -32,7 +32,7 @@ export const Highlight = ({
   return (
     <div
       style={{ backgroundImage: `url(${backgroundImage})` }}
-      className={twMerge(
+      className={cn(
         `highlight relative grid ${alignmentMap[alignment]} h-56 bg-center bg-cover grid-cols-[1.3fr_2fr] min-md:h-80
         after:absolute after:w-full after:h-full after:bg-[rgba(0, 0, 0, 0.6)]
         `,

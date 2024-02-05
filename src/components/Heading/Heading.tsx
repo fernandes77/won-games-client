@@ -1,5 +1,6 @@
 import { Children } from '@/types/children'
-import { twMerge } from 'tailwind-merge'
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 
 type LineColors = 'primary' | 'secondary'
 
@@ -9,8 +10,8 @@ type HeadingProps = {
   lineBottom?: boolean
   lineColor?: LineColors
   size?: 'sm' | 'md' | 'hg'
-  className?: string
-} & Children
+} & Children &
+  ClassName
 
 const colorMap = {
   black: 'text-black',
@@ -41,7 +42,7 @@ export const Heading = ({
   const lineBottomSizeClassesMap = { sm: 'w-7', md: 'w-14', hg: 'w-14' }
 
   return (
-    <div className={twMerge('relative', className)}>
+    <div className={cn('relative', className)}>
       <h2
         className={`${lineLeftStyle} ${headingSizeClassesMap[size]} ${colorMap[color]} font-bold mb-md`}
       >

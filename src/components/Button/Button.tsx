@@ -1,13 +1,13 @@
 import { Children } from '@/types/children'
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 import Link, { type LinkProps } from 'next/link'
-import { twMerge } from 'tailwind-merge'
 
 type ButtonProps = {
   size?: 'sm' | 'md' | 'lg'
   fullWidth?: boolean
   minimal?: boolean
   icon?: JSX.Element
-  className?: string
   as?:
     | {
         type: 'button'
@@ -17,7 +17,8 @@ type ButtonProps = {
         type: 'link'
         props: LinkProps
       }
-} & Children
+} & Children &
+  ClassName
 
 export const buttonSizesMap = {
   sm: 'h-[1.875rem] text-xs',
@@ -52,7 +53,7 @@ export const Button = ({
 
   if (as?.type === 'link')
     return (
-      <Link {...as.props} className={twMerge(classes, className)}>
+      <Link {...as.props} className={cn(classes, className)}>
         {hasIcon && icon}
         {!!children && (
           <span className={hasIcon ? 'ml-xxs' : ''}>{children}</span>
@@ -61,7 +62,7 @@ export const Button = ({
     )
 
   return (
-    <button {...as.props} className={twMerge(classes, className)}>
+    <button {...as.props} className={cn(classes, className)}>
       {hasIcon && icon}
       {!!children && (
         <span className={hasIcon ? 'ml-xxs' : ''}>{children}</span>

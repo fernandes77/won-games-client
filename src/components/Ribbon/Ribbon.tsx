@@ -1,5 +1,6 @@
 import { Children } from '@/types/children'
-import { twMerge } from 'tailwind-merge'
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 
 export type RibbonColors = 'primary' | 'secondary'
 export type RibbonSizes = 'md' | 'sm'
@@ -7,8 +8,8 @@ export type RibbonSizes = 'md' | 'sm'
 type RibbonProps = {
   color?: 'primary' | 'secondary'
   size?: 'md' | 'sm'
-  className?: string
-} & Children
+} & Children &
+  ClassName
 
 export const ribbonSizeMap = {
   md: 'text-sm h-9 px-sm right-[-20px] before:top-9 before:border-t-[10px] before:border-r-[20px]',
@@ -28,7 +29,7 @@ export const Ribbon = ({
   className
 }: RibbonProps) => (
   <div
-    className={twMerge(
+    className={cn(
       `${ribbonSizeMap[size]} ${colorMap[color]}
       absolute top-xs flex items-center font-bold text-white
       before:absolute before:right-0 before:border-solid before:border-l-0

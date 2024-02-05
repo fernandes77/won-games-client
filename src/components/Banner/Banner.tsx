@@ -4,6 +4,7 @@ import {
   type RibbonColors,
   type RibbonSizes
 } from '@/components/Ribbon/Ribbon'
+import { ClassName } from '@/types/class-name'
 import { cn } from '@/utils/merge-classnames'
 
 export type BannerProps = {
@@ -15,8 +16,7 @@ export type BannerProps = {
   ribbon?: React.ReactNode
   ribbonColor?: RibbonColors
   ribbonSize?: RibbonSizes
-  className?: string
-}
+} & ClassName
 
 export const Banner = ({
   img,

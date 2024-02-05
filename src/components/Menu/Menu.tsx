@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/Button/Button'
 import { Logo } from '@/components/Logo/Logo'
+import { cn } from '@/utils/merge-classnames'
 import {
   IconMenu2,
   IconSearch,
@@ -10,13 +11,12 @@ import {
 } from '@tabler/icons-react'
 import Link from 'next/link'
 import { useState } from 'react'
-import { twMerge } from 'tailwind-merge'
 
 type IconWrapperProps = React.HTMLAttributes<HTMLDivElement>
 
 const IconWrapper = ({ children, className, ...props }: IconWrapperProps) => (
   <div
-    className={twMerge('text-white cursor-pointer w-6 h-6', className)}
+    className={cn('text-white cursor-pointer w-6 h-6', className)}
     {...props}
   >
     {children}
@@ -30,7 +30,7 @@ const MenuLink = ({
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
   <Link
     href="/"
-    className={twMerge(
+    className={cn(
       'relative text-md mx-sm mt-1 text-white text-center hover:after:absolute hover:after:block hover:after:h-1 hover:after:bg-primary hover:after:animate-underline-grow',
       className
     )}
