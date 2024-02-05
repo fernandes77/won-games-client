@@ -46,6 +46,18 @@ describe('<Button />', () => {
     expect(screen.getByTestId('icon')).toBeInTheDocument()
   })
 
+  it('should render a disabled Button', () => {
+    render(
+      <Button as={{ type: 'button', props: { disabled: true } }}>
+        Buy now
+      </Button>
+    )
+
+    expect(screen.getByRole('button', { name: /buy now/i })).toHaveClass(
+      'disabled:cursor-not-allowed disabled:saturate-[30%]'
+    )
+  })
+
   it('should render Button as a link', () => {
     render(
       <Button as={{ type: 'link', props: { href: '/link' } }}>Buy now</Button>

@@ -62,7 +62,16 @@ export const Button = ({
     )
 
   return (
-    <button {...as.props} className={cn(classes, className)}>
+    <button
+      {...as.props}
+      className={cn(
+        classes,
+        as.props?.disabled
+          ? 'disabled:cursor-not-allowed disabled:saturate-[30%]'
+          : '',
+        className
+      )}
+    >
       {hasIcon && icon}
       {!!children && (
         <span className={hasIcon ? 'ml-xxs' : ''}>{children}</span>
