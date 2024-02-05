@@ -1,54 +1,13 @@
 'use client'
 
-import { Slider, SliderSettings } from '@/components/Slider/Slider'
-import { IconArrowLeft, IconArrowRight, IconX } from '@tabler/icons-react'
-import { useEffect, useRef, useState } from 'react'
-import SlickSlider from 'react-slick'
-import './Gallery.css'
-
-const commonSettings: SliderSettings = {
-  infinite: false,
-  lazyLoad: 'ondemand',
-  arrows: true,
-  nextArrow: <IconArrowRight aria-label="next image" />,
-  prevArrow: <IconArrowLeft aria-label="previous image" />
-}
-
-const settings: SliderSettings = {
-  ...commonSettings,
-  slidesToShow: 4,
-  responsive: [
-    {
-      breakpoint: 1375,
-      settings: {
-        arrows: false,
-        slidesToShow: 3.2,
-        draggable: true
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.2,
-        draggable: true
-      }
-    },
-    {
-      breakpoint: 768,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.2,
-        draggable: true
-      }
-    }
-  ]
-}
-
-const modalSettings: SliderSettings = {
-  ...commonSettings,
-  slidesToShow: 1
-}
+import {
+  Carousel,
+  CarouselApi,
+  CarouselContent,
+  CarouselItem
+} from '@/components/ui/carousel'
+import { IconX } from '@tabler/icons-react'
+import { useEffect, useState } from 'react'
 
 export type GalleryImageProps = {
   src: string
@@ -60,7 +19,7 @@ export type GalleryProps = {
 }
 
 export const Gallery = ({ items }: GalleryProps) => {
-  const slider = useRef<SlickSlider>(null)
+  const [api, setApi] = useState<CarouselApi>()
   const [isOpen, setIsOpen] = useState(false)
 
   useEffect(() => {
@@ -73,21 +32,27 @@ export const Gallery = ({ items }: GalleryProps) => {
   }, [])
 
   return (
-    <div className="gallery">
-      <Slider ref={slider} settings={settings}>
-        {items.map((item, index) => (
-          <img
-            role="button"
-            key={`thumb-${index}`}
-            src={item.src}
-            alt={`Thumb - ${item.label}`}
-            onClick={() => {
-              setIsOpen(true)
-              slider.current!.slickGoTo(index, true)
-            }}
-          />
-        ))}
-      </Slider>
+    <div>
+      <Carousel>
+        <CarouselContent>
+          {items.map((item, index) => (
+            <CarouselItem
+              key={`thumb-${index}`}
+              className="min-huge:basis-[30%] max-huge:min-lg:basis-[45%] max-lg:basis-[60%]"
+            >
+              <img
+                role="button"
+                src={item.src}
+                alt={`Thumb - ${item.label}`}
+                onClick={() => {
+                  setIsOpen(true)
+                  api?.scrollTo(index)
+                }}
+              />
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+      </Carousel>
 
       <div
         aria-label="modal"
@@ -106,11 +71,15 @@ export const Gallery = ({ items }: GalleryProps) => {
         </div>
 
         <div className="max-w-[min(75rem,100%)] max-h-[50rem]">
-          <Slider ref={slider} settings={modalSettings}>
-            {items.map((item, index) => (
-              <img key={`gallery-${index}`} src={item.src} alt={item.label} />
-            ))}
-          </Slider>
+          <Carousel setApi={setApi}>
+            <CarouselContent>
+              {items.map((item, index) => (
+                <CarouselItem key={`gallery-${index}`}>
+                  <img src={item.src} alt={item.label} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
       </div>
     </div>
