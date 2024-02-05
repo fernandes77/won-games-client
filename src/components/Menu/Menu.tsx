@@ -28,7 +28,8 @@ const MenuLink = ({
   className,
   ...props
 }: React.AnchorHTMLAttributes<HTMLAnchorElement>) => (
-  <a
+  <Link
+    href="/"
     className={twMerge(
       'relative text-md mx-sm mt-1 text-white text-center hover:after:absolute hover:after:block hover:after:h-1 hover:after:bg-primary hover:after:animate-underline-grow',
       className
@@ -36,7 +37,7 @@ const MenuLink = ({
     {...props}
   >
     {children}
-  </a>
+  </Link>
 )
 
 type MenuProps = { username?: string }
@@ -57,11 +58,13 @@ export const Menu = ({ username }: MenuProps) => {
       </IconWrapper>
 
       <div className="max-md:absolute max-md:left-1/2 max-md:-translate-x-1/2">
-        <Logo hideTextOnMobile />
+        <Link href="/">
+          <Logo hideTextOnMobile />
+        </Link>
       </div>
 
       <div className="max-md:hidden min-md:ml-sm">
-        <MenuLink href="#">Home</MenuLink>
+        <MenuLink href="/">Home</MenuLink>
         <MenuLink href="#">Explore</MenuLink>
       </div>
 
@@ -104,7 +107,7 @@ export const Menu = ({ username }: MenuProps) => {
         />
 
         <div className="flex flex-col items-center justify-center flex-1 min-md:ml-sm">
-          <MenuLink className={menuLinkMobileClasses} href="#">
+          <MenuLink className={menuLinkMobileClasses} href="/">
             Home
           </MenuLink>
           <MenuLink className={menuLinkMobileClasses} href="#">

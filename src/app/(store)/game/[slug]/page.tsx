@@ -1,4 +1,5 @@
 import { Container } from '@/components/Container/Container'
+import { Divider } from '@/components/Divider/Divider'
 import { Gallery } from '@/components/Gallery/Gallery'
 import galleryMock from '@/components/Gallery/Gallery.mock'
 import gamesMock from '@/components/GameCardSlider/GameCardSlider.mock'
@@ -81,11 +82,9 @@ export default function Game() {
             <TextContent title="Description" content={props.description} />
           </section>
 
-          <section
-            className="mb-xl min-md:mb-24 [&>div]:pb-xl [&>div]:border-b-[1px]
-          [&>div]:border-[rgba(181,_181,_181,_0.3)] [&>div]:min-md:pb-[7rem]"
-          >
+          <section className="mb-xl min-md:mb-24">
             <GameDetails {...props.details} />
+            <Divider />
           </section>
         </Container>
 

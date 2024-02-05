@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Empty /> should render correctly 1`] = `
+<body>
+  <div>
+    <main
+      class="flex flex-col items-center text-center"
+    >
+      <img
+        alt="A gamer in a couch playing videogame"
+        class="max-w-full"
+        role="image"
+        src="/img/empty.svg"
+      />
+      <h2
+        class="text-primary text-xxl"
+      >
+        A simple title
+      </h2>
+      <p
+        class="text-white text-lg font-light mb-md"
+      >
+        A simple description
+      </p>
+      <a
+        class="inline-flex items-center justify-center cursor-pointer text-white rounded p-xxs [&>svg]:w-4 h-10 text-sm px-md py-xxs bg-gradient-to-t from-[#ff5f5f] via-[#f062c0] to-[#f062c0] hover:bg-gradient-to-t hover:from-[#e35565] hover:via-[#d958a6] hover:to-[#d958a6]"
+        href="/"
+      >
+        <span
+          class=""
+        >
+          Go back to store
+        </span>
+      </a>
+    </main>
+  </div>
+</body>
+`;

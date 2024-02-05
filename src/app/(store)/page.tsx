@@ -7,7 +7,7 @@ import { Showcase } from '@/components/Showcase/Showcase'
 
 const BannerSection = () => (
   <Container>
-    <section className="my-lg -mx-half-gutter min-md:my-lg min-md:mx-0 relative z-base">
+    <section className=" mb-lg -mx-half-gutter min-md:mb-lg relative z-base">
       <BannerSlider items={banners} />
     </section>
   </Container>

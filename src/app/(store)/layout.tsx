@@ -10,7 +10,7 @@ export default function StoreLayout({ children }: Children) {
         <Menu />
       </Container>
 
-      <div className="flex-[1_0_auto]">{children}</div>
+      <div className="flex-[1_0_auto] mt-xl">{children}</div>
 
       <section
         className="mt-lg pb-xs pt-xxl bg-white [clip-path:polygon(0_5%,100%_0%,100%_100%,0_100%)]
