@@ -1,36 +1,42 @@
 'use client'
 
 import { Banner, BannerProps } from '@/components/Banner/Banner'
-import { Slider, SliderSettings } from '@/components/Slider/Slider'
-import './BannerSlider.css'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious
+} from '@/components/ui/carousel'
 
 type BannerSliderProps = {
   items: BannerProps[]
 }
 
-const settings: SliderSettings = {
-  dots: true,
-  arrows: false,
-  vertical: true,
-  verticalSwiping: true,
-  infinite: false,
-  responsive: [
-    {
-      breakpoint: 1170,
-      settings: {
-        vertical: false,
-        verticalSwiping: false
-      }
-    }
-  ]
-}
-
 export const BannerSlider = ({ items }: BannerSliderProps) => (
   <section>
-    <Slider settings={settings}>
-      {items.map((item) => (
-        <Banner key={item.title} {...item} />
-      ))}
-    </Slider>
+    <Carousel
+      opts={{
+        align: 'start',
+        containScroll: 'trimSnaps'
+      }}
+      className="w-full"
+    >
+      <CarouselContent>
+        {items.map((item) => (
+          <CarouselItem className="basis-full">
+            <Banner
+              className="max-w-[65rem] mx-auto"
+              key={item.title}
+              {...item}
+            />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+      <div className="max-lg:hidden">
+        <CarouselPrevious className="text-white left-6" />
+        <CarouselNext className="text-white right-6" />
+      </div>
+    </Carousel>
   </section>
 )

@@ -1,5 +1,4 @@
 import { render, screen } from '@/utils/tests/helpers'
-import 'match-media-mock'
 import { Slider } from './Slider'
 
 describe('<Slider />', () => {

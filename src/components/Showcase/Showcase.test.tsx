@@ -1,7 +1,6 @@
 import games from '@/components/GameCardSlider/GameCardSlider.mock'
 import highlight from '@/components/Highlight/Highlight.mock'
 import { render, screen } from '@/utils/tests/helpers'
-import 'match-media-mock'
 import { Showcase } from './Showcase'
 
 const props = {

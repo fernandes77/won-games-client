@@ -2,7 +2,7 @@
 
 exports[`<Banner /> should render correctly 1`] = `
 <div
-  class="banner relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]"
+  class="relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]"
 >
   <div
     aria-label="Defy death"

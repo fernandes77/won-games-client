@@ -1,5 +1,4 @@
 import { render } from '@/utils/tests/helpers'
-import 'match-media-mock'
 import { GameCardSlider } from './GameCardSlider'
 
 const items = [

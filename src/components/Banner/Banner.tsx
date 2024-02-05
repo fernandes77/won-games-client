@@ -4,6 +4,7 @@ import {
   type RibbonColors,
   type RibbonSizes
 } from '@/components/Ribbon/Ribbon'
+import { cn } from '@/utils/merge-classnames'
 
 export type BannerProps = {
   img: string
@@ -14,6 +15,7 @@ export type BannerProps = {
   ribbon?: React.ReactNode
   ribbonColor?: RibbonColors
   ribbonSize?: RibbonSizes
+  className?: string
 }
 
 export const Banner = ({
@@ -24,7 +26,8 @@ export const Banner = ({
   buttonLink,
   ribbon,
   ribbonColor = 'primary',
-  ribbonSize = 'md'
+  ribbonSize = 'md',
+  className
 }: BannerProps) => {
   const ribbonSpacingMap = {
     md: 'min-lg:right-[-20px]',
@@ -32,7 +35,12 @@ export const Banner = ({
   }
 
   return (
-    <div className="banner relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]">
+    <div
+      className={cn(
+        'relative min-md:shadow-[0_4px_5px_0_rgba(0,0,0,0.2)]',
+        className
+      )}
+    >
       {!!ribbon && (
         <Ribbon
           className={`${ribbonSpacingMap[ribbonSize]}

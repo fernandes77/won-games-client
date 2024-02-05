@@ -1,5 +1,4 @@
 import { render, screen } from '@/utils/tests/helpers'
-import 'match-media-mock'
 import { BannerSlider } from './BannerSlider'
 
 const items = [
@@ -21,17 +20,14 @@ const items = [
 ]
 
 describe('<BannerSlider />', () => {
-  it('should render vertical slider', () => {
-    const { container } = render(<BannerSlider items={items} />)
+  it('should render slider', () => {
+    render(<BannerSlider items={items} />)
 
-    expect(container.querySelector('.slick-vertical')).toBeInTheDocument()
+    expect(screen.getByRole('region')).toBeInTheDocument()
   })
 
   it('should render with 1 active item', () => {
-    const { container } = render(<BannerSlider items={items} />)
-
-    expect(container.querySelectorAll('.slick-slide')).toHaveLength(2)
-    expect(container.querySelectorAll('li.slick-active')).toHaveLength(1)
+    render(<BannerSlider items={items} />)
 
     expect(
       screen.getByRole('heading', { name: /defy death 1/i, hidden: false })
