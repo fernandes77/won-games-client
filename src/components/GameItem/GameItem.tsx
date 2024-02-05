@@ -1,3 +1,5 @@
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 import { IconDownload } from '@tabler/icons-react'
 
 export type PaymentInfoProps = {
@@ -13,16 +15,22 @@ export type GameItemProps = {
   price: string
   downloadLink?: string
   paymentInfo?: PaymentInfoProps
-}
+} & ClassName
 
 export const GameItem = ({
   img,
   title,
   price,
   downloadLink,
-  paymentInfo
+  paymentInfo,
+  className
 }: GameItemProps) => (
-  <div className="p-sm border-b-[1px] border-gray-light min-md:flex">
+  <div
+    className={cn(
+      'p-sm border-b-[1px] border-gray-light min-md:flex',
+      className
+    )}
+  >
     <div className="flex">
       <div className="shrink-0 mr-3 w-24 h-14 min-md:mr-xs min-md:w-[9.4rem] min-md:h-[4.4rem]">
         <img src={img} alt={title} className="w-full h-full object-cover" />
