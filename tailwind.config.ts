@@ -14,6 +14,7 @@ const config: Config = {
         container: '81.25rem',
         gutter: '2rem',
         'half-gutter': '1rem',
+        'double-gutter': '4rem',
         xxs: '0.5rem',
         xs: '1rem',
         sm: '1.5rem',
