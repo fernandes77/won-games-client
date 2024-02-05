@@ -1,58 +1,12 @@
 'use client'
 
 import { GameCard, GameCardProps } from '@/components/GameCard/GameCard'
-import { Slider, SliderArrow, SliderSettings } from '@/components/Slider/Slider'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem
+} from '@/components/ui/carousel'
 import { ClassName } from '@/types/class-name'
-import { cn } from '@/utils/merge-classnames'
-import { IconArrowLeft, IconArrowRight } from '@tabler/icons-react'
-import './GameCardSlider.css'
-
-const settings: SliderSettings = {
-  arrows: true,
-  slidesToShow: 4,
-  infinite: false,
-  lazyLoad: 'ondemand',
-  responsive: [
-    {
-      breakpoint: 1375,
-      settings: {
-        arrows: false,
-        slidesToShow: 3.2
-      }
-    },
-    {
-      breakpoint: 1024,
-      settings: {
-        arrows: false,
-        slidesToShow: 2.2
-      }
-    },
-    {
-      breakpoint: 570,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.2
-      }
-    },
-    {
-      breakpoint: 375,
-      settings: {
-        arrows: false,
-        slidesToShow: 1.1
-      }
-    }
-  ],
-  nextArrow: (
-    <SliderArrow>
-      <IconArrowRight aria-label="next games" />
-    </SliderArrow>
-  ),
-  prevArrow: (
-    <SliderArrow>
-      <IconArrowLeft aria-label="previous games" />
-    </SliderArrow>
-  )
-}
 
 export type GameCardSliderProps = {
   items: GameCardProps[]
@@ -64,11 +18,20 @@ export const GameCardSlider = ({
   color = 'white',
   className
 }: GameCardSliderProps) => (
-  <section color={color} className={cn('game-card-slider', className)}>
-    <Slider settings={settings}>
-      {items.map((item, index) => (
-        <GameCard key={index} {...item} />
-      ))}
-    </Slider>
+  <section color={color} className={className}>
+    <Carousel className="pr-4">
+      <CarouselContent>
+        {items.map((item, index) => (
+          <CarouselItem
+            key={index}
+            className="min-lg:basis-[30%] min-md:max-lg:basis-[40%]
+            max-md:min-sm:basis-[65%] max-sm:basis-[85%]"
+            data-testid="game-card-slide"
+          >
+            <GameCard {...item} />
+          </CarouselItem>
+        ))}
+      </CarouselContent>
+    </Carousel>
   </section>
 )
