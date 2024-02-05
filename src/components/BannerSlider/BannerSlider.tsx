@@ -15,13 +15,7 @@ type BannerSliderProps = {
 
 export const BannerSlider = ({ items }: BannerSliderProps) => (
   <section>
-    <Carousel
-      opts={{
-        align: 'start',
-        containScroll: 'trimSnaps'
-      }}
-      className="w-full"
-    >
+    <Carousel>
       <CarouselContent>
         {items.map((item) => (
           <CarouselItem className="basis-full">
