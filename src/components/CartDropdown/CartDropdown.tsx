@@ -6,19 +6,24 @@ import {
   DropdownTrigger
 } from '@/components/Dropdown/Dropdown'
 import { GameItemProps } from '@/components/GameItem/GameItem'
+import { ClassName } from '@/types/class-name'
 
 export type CartDropdownProps = {
   items?: GameItemProps[]
   total?: string
-}
+} & ClassName
 
-export const CartDropdown = ({ items, total }: CartDropdownProps) => (
-  <main>
+export const CartDropdown = ({
+  items,
+  total,
+  className
+}: CartDropdownProps) => (
+  <main className={className}>
     <Dropdown>
-      <DropdownTrigger asChild>
-        <button>
+      <DropdownTrigger asChild className="cursor-pointer">
+        <span role="button">
           <CartIcon quantity={items?.length} />
-        </button>
+        </span>
       </DropdownTrigger>
 
       <DropdownContent className="w-[35rem]">

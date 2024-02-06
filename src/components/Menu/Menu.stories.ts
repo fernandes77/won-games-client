@@ -8,8 +8,6 @@ const meta: Meta<typeof Menu> = {
 export default meta
 type Story = StoryObj<typeof Menu>
 
-export const Primary: Story = {
-  parameters: {
-    layout: 'fullscreen'
-  }
-}
+export const Primary: Story = {}
+
+export const Logged: Story = { args: { username: 'Rodrigo' } }

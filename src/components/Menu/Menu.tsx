@@ -1,14 +1,12 @@
 'use client'
 
 import { Button } from '@/components/Button/Button'
+import { CartDropdown } from '@/components/CartDropdown/CartDropdown'
+import { CartIcon } from '@/components/CartIcon/CartIcon'
 import { Logo } from '@/components/Logo/Logo'
+import { UserDropdown } from '@/components/UserDropdown/UserDropdown'
 import { cn } from '@/utils/merge-classnames'
-import {
-  IconMenu2,
-  IconSearch,
-  IconShoppingCart,
-  IconX
-} from '@tabler/icons-react'
+import { IconMenu2, IconSearch, IconX } from '@tabler/icons-react'
 import Link from 'next/link'
 import { useState } from 'react'
 
@@ -65,7 +63,7 @@ export const Menu = ({ username }: MenuProps) => {
 
       <div className="max-md:hidden min-md:ml-sm">
         <MenuLink href="/">Home</MenuLink>
-        <MenuLink href="#">Explore</MenuLink>
+        <MenuLink href="/games">Explore</MenuLink>
       </div>
 
       <div className="flex grow justify-end items-center [&>div]:ml-xs">
@@ -74,10 +72,14 @@ export const Menu = ({ username }: MenuProps) => {
         </IconWrapper>
 
         <IconWrapper>
-          <IconShoppingCart aria-label="Open Shopping Cart" />
+          <CartDropdown className="hidden min-md:block" />
+
+          <Link href="/cart" className="hidden max-md:block">
+            <CartIcon />
+          </Link>
         </IconWrapper>
 
-        {!username && (
+        {!username ? (
           <div>
             <Button
               as={{ type: 'link', props: { href: '/sign-in' } }}
@@ -86,6 +88,8 @@ export const Menu = ({ username }: MenuProps) => {
               Sign in
             </Button>
           </div>
+        ) : (
+          <UserDropdown username={username} />
         )}
       </div>
 
@@ -110,16 +114,19 @@ export const Menu = ({ username }: MenuProps) => {
           <MenuLink className={menuLinkMobileClasses} href="/">
             Home
           </MenuLink>
-          <MenuLink className={menuLinkMobileClasses} href="#">
+          <MenuLink className={menuLinkMobileClasses} href="/games">
             Explore
           </MenuLink>
 
           {!!username && (
             <>
-              <MenuLink className={menuLinkMobileClasses} href="#">
-                My account
+              <MenuLink className={menuLinkMobileClasses} href="/profile/me">
+                My profile
               </MenuLink>
-              <MenuLink className={menuLinkMobileClasses} href="#">
+              <MenuLink
+                className={menuLinkMobileClasses}
+                href="/profile/wishlist"
+              >
                 Wishlist
               </MenuLink>
             </>
