@@ -25,8 +25,8 @@ export default function Games() {
 
       <section>
         <Grid>
-          {games.map((item) => (
-            <GameCard key={item.title} {...item} />
+          {games.map((item, index) => (
+            <GameCard key={index} {...item} />
           ))}
         </Grid>
 
