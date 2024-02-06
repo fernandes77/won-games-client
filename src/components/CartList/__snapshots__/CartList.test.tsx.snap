@@ -67,9 +67,11 @@ exports[`<CartList /> should render the cart list 1`] = `
     </div>
   </div>
   <div
-    class="bg-gray-lighter text-black font-bold text-sm p-5 flex justify-between min-md:text-md min-md:p-sm"
+    class="bg-gray-lighter text-black font-bold text-sm p-5 flex justify-between items-center min-md:text-md min-md:p-sm"
   >
-    Total 
+    <span>
+      Total:
+    </span>
     <span
       class="text-primary"
     >

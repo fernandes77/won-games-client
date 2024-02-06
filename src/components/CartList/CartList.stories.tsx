@@ -3,14 +3,7 @@ import { CartList } from './CartList'
 import items from './CartList.mock'
 
 const meta: Meta<typeof CartList> = {
-  component: CartList
-}
-
-export default meta
-type Story = StoryObj<typeof CartList>
-
-export const Primary: Story = {
-  args: { items, total: 'R$ 430,00' },
+  component: CartList,
   decorators: [
     (Story) => (
       <div style={{ maxWidth: 800 }}>
@@ -18,4 +11,15 @@ export const Primary: Story = {
       </div>
     )
   ]
+}
+
+export default meta
+type Story = StoryObj<typeof CartList>
+
+export const Primary: Story = {
+  args: { items, total: 'R$ 430,00' }
+}
+
+export const WithButton: Story = {
+  args: { items, total: 'R$ 430,00', hasButton: true }
 }
