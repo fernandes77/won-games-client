@@ -207,7 +207,7 @@ exports[`<FormSignUp /> should render the form 1`] = `
       Already have an account?
        
       <a
-        class="text-secondary border-[1px] border-solid border-secondary transition-[color,border,0.1s_ease-in-out] hover:text-secondary-dark hover:border-b-[1px] hover:border-solid hover:border-secondary-dark"
+        class="text-secondary border border-solid border-secondary transition-[color,border,0.1s_ease-in-out] hover:text-secondary-dark hover:border-b hover:border-solid hover:border-secondary-dark"
         href="/sign-in"
       >
         Sign in

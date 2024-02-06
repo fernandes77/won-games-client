@@ -2,7 +2,7 @@
 
 exports[`<ProfileMenu /> should render the menu 1`] = `
 <nav
-  class="flex border-b-[1px] border-gray-light min-md:flex-col min-md:[&_a]:border-b-[1px] min-md:[&_a]:border-gray-light last:min-md:[&_a]:border-0"
+  class="flex border-b border-gray-light min-md:flex-col min-md:[&_a]:border-b min-md:[&_a]:border-gray-light last:min-md:[&_a]:border-0"
 >
   <a
     class="bg-white text-black flex items-center py-xs px-sm transition-[background,color,0.3s_ease-in-out] hover:bg-primary hover:text-white max-md:justify-center max-md:flex-[1]"

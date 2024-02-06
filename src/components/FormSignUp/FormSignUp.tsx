@@ -43,9 +43,9 @@ export const FormSignUp = () => (
         Already have an account?{' '}
         <Link
           href="/sign-in"
-          className="text-secondary border-[1px] border-solid border-secondary
+          className="text-secondary border border-solid border-secondary
           transition-[color,border,0.1s_ease-in-out] hover:text-secondary-dark
-          hover:border-b-[1px] hover:border-solid hover:border-secondary-dark"
+          hover:border-b hover:border-solid hover:border-secondary-dark"
         >
           Sign in
         </Link>

@@ -38,7 +38,7 @@ const ProfileMenuLink = ({
 
 export const ProfileMenu = () => (
   <nav
-    className="flex border-b-[1px] border-gray-light min-md:flex-col min-md:[&_a]:border-b-[1px]
+    className="flex border-b border-gray-light min-md:flex-col min-md:[&_a]:border-b
     min-md:[&_a]:border-gray-light last:min-md:[&_a]:border-0"
   >
     <ProfileMenuLink

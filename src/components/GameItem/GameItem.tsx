@@ -25,12 +25,7 @@ export const GameItem = ({
   paymentInfo,
   className
 }: GameItemProps) => (
-  <div
-    className={cn(
-      'p-sm border-b-[1px] border-gray-light min-md:flex',
-      className
-    )}
-  >
+  <div className={cn('p-sm border-b border-gray-light min-md:flex', className)}>
     <div className="flex">
       <div className="shrink-0 mr-3 w-24 h-14 min-md:mr-xs min-md:w-[9.4rem] min-md:h-[4.4rem]">
         <img src={img} alt={title} className="w-full h-full object-cover" />
