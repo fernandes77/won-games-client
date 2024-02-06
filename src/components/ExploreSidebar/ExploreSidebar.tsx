@@ -94,7 +94,7 @@ export const ExploreSidebar = ({
           min-md:overflow-y-visible min-md:p-0 min-md:mt-0 min-md:mb-0`,
           isOpen
             ? 'max-md:mt-md max-md:translate-y-0 max-md:overflow-y-scroll max-md:z-modal'
-            : 'max-md:translate-y-7 h-0 max-md:invisible max-md:absolute max-md:left-0'
+            : 'max-md:translate-y-7 max-md:h-0 max-md:invisible max-md:absolute max-md:left-0'
         )}
       >
         {items.map((item) => (
@@ -145,23 +145,23 @@ export const ExploreSidebar = ({
               ))}
           </div>
         ))}
+      </div>
 
-        <div
-          className={cn(
-            'shadow-[0_-2px_4px_rgba(#030517,0.2)] p-sm',
-            isOpen
-              ? 'max-md:z-modal'
-              : 'max-md:invisible max-md:absolute max-md:left-0'
-          )}
+      <div
+        className={cn(
+          'shadow-[0_-2px_4px_rgba(#030517,0.2)] p-sm',
+          isOpen
+            ? 'max-md:z-modal'
+            : 'max-md:invisible max-md:absolute max-md:left-0'
+        )}
+      >
+        <Button
+          fullWidth
+          size="md"
+          as={{ type: 'button', props: { onClick: handleFilter } }}
         >
-          <Button
-            fullWidth
-            size="md"
-            as={{ type: 'button', props: { onClick: handleFilter } }}
-          >
-            Filter
-          </Button>
-        </div>
+          Filter
+        </Button>
       </div>
     </div>
   )

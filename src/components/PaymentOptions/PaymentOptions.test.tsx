@@ -1,5 +1,4 @@
-import { render, screen, waitFor } from '@/utils/tests/helpers'
-import userEvent from '@testing-library/user-event'
+import { render, screen, user, waitFor } from '@/utils/tests/helpers'
 import { PaymentOptions } from './PaymentOptions'
 import cards from './PaymentOptions.mock'
 
@@ -15,17 +14,17 @@ describe('<PaymentOptions />', () => {
   it('should handle select card when clicking on the label', async () => {
     render(<PaymentOptions cards={cards} handlePayment={jest.fn} />)
 
-    userEvent.click(screen.getByLabelText(/4325/))
+    await user.click(screen.getByLabelText(/4325/))
     await waitFor(() => {
       expect(screen.getByRole('radio', { name: /4325/ })).toBeChecked()
     })
   })
 
-  it('should not call handlePayment when button is disabled', () => {
+  it('should not call handlePayment when button is disabled', async () => {
     const handlePayment = jest.fn()
     render(<PaymentOptions cards={cards} handlePayment={handlePayment} />)
 
-    userEvent.click(screen.getByRole('button', { name: /buy now/i }))
+    await user.click(screen.getByRole('button', { name: /buy now/i }))
     expect(handlePayment).not.toHaveBeenCalled()
   })
 
@@ -33,8 +32,8 @@ describe('<PaymentOptions />', () => {
     const handlePayment = jest.fn()
     render(<PaymentOptions cards={cards} handlePayment={handlePayment} />)
 
-    userEvent.click(screen.getByLabelText(/4325/))
-    userEvent.click(screen.getByRole('button', { name: /buy now/i }))
+    await user.click(screen.getByLabelText(/4325/))
+    await user.click(screen.getByRole('button', { name: /buy now/i }))
 
     await waitFor(() => {
       expect(handlePayment).toHaveBeenCalled()
