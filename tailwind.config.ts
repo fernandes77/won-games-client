@@ -105,6 +105,6 @@ const config: Config = {
       }
     }
   },
-  plugins: [tailwindCssGridAreas]
+  plugins: [tailwindCssGridAreas, require('tailwindcss-animate')]
 }
 export default config

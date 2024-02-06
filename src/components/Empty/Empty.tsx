@@ -1,13 +1,20 @@
 import { Button } from '@/components/Button/Button'
+import { ClassName } from '@/types/class-name'
+import { cn } from '@/utils/merge-classnames'
 
 export type EmptyProps = {
   title: string
   description: string
   hasLink?: boolean
-}
+} & ClassName
 
-export const Empty = ({ title, description, hasLink }: EmptyProps) => (
-  <main className="flex flex-col items-center text-center">
+export const Empty = ({
+  title,
+  description,
+  hasLink,
+  className
+}: EmptyProps) => (
+  <main className={cn('flex flex-col items-center text-center', className)}>
     <img
       src="/img/empty.svg"
       alt="A gamer in a couch playing videogame"

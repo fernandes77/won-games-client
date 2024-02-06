@@ -23,3 +23,13 @@ export const Primary: Story = {
 export const WithButton: Story = {
   args: { items, total: 'R$ 430,00', hasButton: true }
 }
+
+export const Empty: Story = {
+  decorators: [
+    (Story) => (
+      <div style={{ maxWidth: 800 }}>
+        <CartList />
+      </div>
+    )
+  ]
+}
