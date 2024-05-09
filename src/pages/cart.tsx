@@ -1,5 +1,3 @@
-'use client'
-
 import { CartList, CartListProps } from '@/components/CartList/CartList'
 import itemsMock from '@/components/CartList/CartList.mock'
 import { Container } from '@/components/Container/Container'
@@ -16,6 +14,7 @@ import {
 } from '@/components/PaymentOptions/PaymentOptions'
 import cardsMock from '@/components/PaymentOptions/PaymentOptions.mock'
 import { Showcase } from '@/components/Showcase/Showcase'
+import { StoreLayout } from '@/layouts/StoreLayout'
 
 const props = {
   items: itemsMock,
@@ -35,7 +34,7 @@ export default function Cart() {
   const handlePayment = () => ({})
 
   return (
-    <>
+    <StoreLayout>
       <Container>
         <Heading lineLeft lineColor="secondary">
           My cart
@@ -63,6 +62,6 @@ export default function Cart() {
         games={props.recommendedGames}
         highlight={props.recommendedHighlight}
       />
-    </>
+    </StoreLayout>
   )
 }

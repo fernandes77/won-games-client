@@ -6,7 +6,11 @@ module.exports = {
     'src/**/*.ts(x)?',
     '!src/**/*.stories.ts(x)?',
     '!src/app/**', // should be tested in e2e
-    '!src/types/**'
+    '!src/types/**',
+    '!src/pages/**/*.tsx',
+    '!src/styles/**/*.ts',
+    '!src/utils/apollo.ts',
+    '!src/types/**/*.d.ts'
   ],
   setupFilesAfterEnv: ['<rootDir>/.jest/setup.ts'],
   modulePaths: ['<rootDir>/src/', '<rootDir>/.jest'],

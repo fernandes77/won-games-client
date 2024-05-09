@@ -1,10 +1,10 @@
-import { BaseStoreLayout } from '@/app/(store)/layout'
 import { Container } from '@/components/Container/Container'
 import { Empty } from '@/components/Empty/Empty'
+import { StoreLayout } from '@/layouts/StoreLayout'
 
 export default function Page404() {
   return (
-    <BaseStoreLayout>
+    <StoreLayout>
       <Container>
         <Empty
           title="404: Not found"
@@ -12,6 +12,6 @@ export default function Page404() {
           hasLink
         />
       </Container>
-    </BaseStoreLayout>
+    </StoreLayout>
   )
 }

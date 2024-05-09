@@ -21,7 +21,7 @@ exports[`<GameInfo /> should render game informations 1`] = `
   <div
     class="text-sm h-9 px-sm before:top-9 before:border-t-[10px] bg-secondary before:border-t-secondary-dark before:border-l-secondary-dark absolute top-xs flex items-center font-bold text-white before:absolute before:right-0 before:border-solid before:border-l-0 before:border-r-transparent before:border-b-transparent before:border-b-[0.625rem] right-[-0.625rem] before:border-r-[0.625rem] min-md:right-sm min-md:top-sm min-md:text-lg min-md:before:border-none"
   >
-    $210,00
+    $210.00
   </div>
   <p
     class="text-sm text-gray mb-sm min-md:max-w-[48rem]"

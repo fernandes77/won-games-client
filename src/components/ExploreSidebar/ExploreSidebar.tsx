@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from '@/components/Button/Button'
 import { Checkbox } from '@/components/Checkbox/Checkbox'
 import { Heading } from '@/components/Heading/Heading'

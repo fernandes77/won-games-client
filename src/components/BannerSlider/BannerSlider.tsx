@@ -1,5 +1,3 @@
-'use client'
-
 import { Banner, BannerProps } from '@/components/Banner/Banner'
 import {
   Carousel,

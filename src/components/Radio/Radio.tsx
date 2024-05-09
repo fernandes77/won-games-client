@@ -1,5 +1,3 @@
-'use client'
-
 type RadioValue = string | ReadonlyArray<string> | number
 
 type RadioProps = {

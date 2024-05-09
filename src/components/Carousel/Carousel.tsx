@@ -1,5 +1,3 @@
-'use client'
-
 import { ClassName } from '@/types/class-name'
 import { cn } from '@/utils/merge-classnames'
 import useEmblaCarousel, {

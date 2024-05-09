@@ -1,5 +1,3 @@
-'use client'
-
 import { cn } from '@/utils/merge-classnames'
 import * as DropdownPrimitive from '@radix-ui/react-dropdown-menu'
 import { Check, ChevronRight, Circle } from 'lucide-react'

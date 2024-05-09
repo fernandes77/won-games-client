@@ -6,6 +6,7 @@ import games from '@/components/GameCardSlider/GameCardSlider.mock'
 import { Heading } from '@/components/Heading/Heading'
 import highlight from '@/components/Highlight/Highlight.mock'
 import { Showcase } from '@/components/Showcase/Showcase'
+import { StoreLayout } from '@/layouts/StoreLayout'
 
 const BannerSection = () => (
   <Container>
@@ -54,7 +55,7 @@ const FreeGamesSection = () => (
 
 export default function Home() {
   return (
-    <>
+    <StoreLayout>
       <BannerSection />
 
       <NewsSection />
@@ -64,6 +65,22 @@ export default function Home() {
       <UpcomingSection />
 
       <FreeGamesSection />
-    </>
+    </StoreLayout>
   )
+}
+
+export async function getServerSideProps() {
+  return {
+    props: {
+      banners: banners,
+      newGames: games,
+      mostPopularHighlight: highlight,
+      mostPopularGames: games,
+      upcomingGames: games,
+      upcomingHighlight: highlight,
+      upcomingMoreGames: games,
+      freeGames: games,
+      freeHighlight: highlight
+    }
+  }
 }

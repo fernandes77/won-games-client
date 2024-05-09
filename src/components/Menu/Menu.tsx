@@ -1,5 +1,3 @@
-'use client'
-
 import { Button } from '@/components/Button/Button'
 import { CartDropdown } from '@/components/CartDropdown/CartDropdown'
 import { CartIcon } from '@/components/CartIcon/CartIcon'

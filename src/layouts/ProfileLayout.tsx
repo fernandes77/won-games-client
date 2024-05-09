@@ -3,7 +3,7 @@ import { Heading } from '@/components/Heading/Heading'
 import { ProfileMenu } from '@/components/ProfileMenu/ProfileMenu'
 import { Children } from '@/types/children'
 
-export default function ProfileLayout({ children }: Children) {
+export const ProfileLayout = ({ children }: Children) => {
   return (
     <Container>
       <Heading lineLeft lineColor="secondary">

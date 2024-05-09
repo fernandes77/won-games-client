@@ -7,6 +7,7 @@ import { Grid } from '@/components/Grid/Grid'
 import { Heading } from '@/components/Heading/Heading'
 import highlightMock from '@/components/Highlight/Highlight.mock'
 import { Showcase } from '@/components/Showcase/Showcase'
+import { StoreLayout } from '@/layouts/StoreLayout'
 
 const props = {
   games: gamesMock,
@@ -16,7 +17,7 @@ const props = {
 
 export default function Game() {
   return (
-    <>
+    <StoreLayout>
       <Container>
         <Heading lineLeft lineColor="secondary">
           Wishlist
@@ -44,6 +45,6 @@ export default function Game() {
         games={props.recommendedGames}
         highlight={props.recommendedHighlight}
       />
-    </>
+    </StoreLayout>
   )
 }

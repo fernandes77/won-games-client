@@ -4,7 +4,7 @@ import { Children } from '@/types/children'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function AuthLayout({ children }: Children) {
+export const AuthLayout = ({ children }: Children) => {
   return (
     <main className="grid grid-cols-1 min-md:grid-cols-[1fr_1fr] h-screen">
       <div
